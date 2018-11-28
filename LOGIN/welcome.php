@@ -28,6 +28,7 @@
     <body>
         <?php
             echo "Szép estét kedves $name!";
+            echo "<br/><a href='logout.php'>Kilépés</a>";
         ?>
     </body>
 </html>
