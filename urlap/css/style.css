@@ -1,0 +1,17 @@
+#content{
+    width: 300px;
+    margin: 0 auto;
+}
+
+input{
+    margin-top: 0.5em;
+}
+
+body{
+    background-color: lightblue;
+}
+
+.error{
+    color: red;
+    font-size: 1.2em;    
+}
