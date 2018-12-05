@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 
-.row{
-    color: wheat;
+#header{
+    color: white;
+    justify-content: center;
 }
 
 body{
@@ -21,8 +22,8 @@ video{
     z-index: -1;
 }
 
-div{
-    color: white;
+.col-sm-4:hover{
+    background: #ddd;
 }
 
 .content{
@@ -47,4 +48,14 @@ div{
 #myBtn:hover{
     background: #ddd;
     color: black;
+}
+
+@media only screen and (max-width: 480px) {
+    video{
+        display: flex;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
