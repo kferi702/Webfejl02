@@ -1,8 +1,8 @@
-* {
+*{
     box-sizing: border-box;
 }
 
-body {
+body{
     margin: 0;
     font-family: Arial;
     font-size: 17px;
@@ -17,7 +17,7 @@ video{
 }
 
 .content{
-	position: fixed;
+    position: fixed;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
@@ -25,7 +25,7 @@ video{
     padding: 20px;
 }
 
-#myBtn {
+#myBtn{
     width: 200px;
     font-size: 18px;
     padding: 10px;
@@ -35,7 +35,7 @@ video{
     cursor: pointer;
 }
 
-#myBtn:hover {
+#myBtn:hover{
     background: #ddd;
     color: black;
 }
