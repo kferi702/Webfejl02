@@ -12,6 +12,11 @@
                     <li><a href="">Termékek</a></li>
                     <li>Regisztráció</li>
                 </ul>
+                <form>
+                    <input type="text" name="user" placeholder="Felhasznélónév"/>
+                    <input type="password" name="password" placeholder="Jelszó"/>
+                    <input type="submit" value="Belépés"/>
+                </form>
             </nav>
         </div>
     </body>
