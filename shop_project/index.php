@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    
+    if (isset($_SESSION['uid'])) {
+        $menu = file_get_contents('html/nav_login.html');
+    } else {
+        $menu = file_get_contents('html/nav_logout.html');
+    }
+?>
 <!DOCTYPE html>
 <html lang="hu">
     <head>
@@ -8,16 +17,7 @@
     <body>
         <div id="content">
             <nav>
-                <ul>
-                    <li><a href="index.php">Főoldal</a></li>
-                    <li><a href="">Termékek</a></li>
-                    <li><a href="">Regisztráció</a></li>
-                </ul>
-                <form method="post" action="belep.php">
-                    <input type="text" name="username" placeholder="Felhasználónév"/>
-                    <input type="password" name="password" placeholder="Jelszó"/>
-                    <input type="submit" name="submit" value="Belép"/>
-                </form>
+                
             </nav>
         </div>
     </body>
