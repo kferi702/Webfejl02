@@ -14,7 +14,7 @@
             
             //Sikeres azonosítás
             $row = $res->fetch_row();
-            $_SESSION['uid'] = $row['id'];
+            $_SESSION['uid'] = $row[0];
             die('Beléptél!');
         } else {
             //Sikertelen azonosítás
