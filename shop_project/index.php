@@ -14,7 +14,7 @@
                     <li><a href="">Regisztráció</a></li>
                 </ul>
                 <form method="post" action="belep.php">
-                    <input type="text" name="user" placeholder="Felhasznélónév"/>
+                    <input type="text" name="username" placeholder="Felhasznélónév"/>
                     <input type="password" name="password" placeholder="Jelszó"/>
                     <input type="submit" name="submit" value="Belép"/>
                 </form>
