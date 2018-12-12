@@ -7,6 +7,26 @@
     } else {
         $menu = file_get_contents('html/nav_logout.html');
     }
+    
+    $sql = "SELECT * FROM termekek";
+    $res = $connection->query($sql);
+    
+    if ($res) {
+        
+        $tabla = "<table>";
+        while ($row = $res->fetch_assoc()){
+            $tabla.="<tr>"
+            . "<td>{$row['tazon']}</td>"
+            . "<td>{$row['tnev']}</td>"
+            . "<td>{$row['fesz']}</td>"
+            . "<td>{$row['telj']}</td>"
+            . "<td>{$row['foglalat']}</td>"
+            . "<td>{$row['elettartam']}</td>"
+            . "<td>{$row['ar']}</td>"
+            . "</tr>";
+        }
+        $tabla.="</table>";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -23,7 +43,7 @@
                 ?>
             </nav>
             <?php
-                
+                echo $tabla;
             ?>
         </div>
     </body>
