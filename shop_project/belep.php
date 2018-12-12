@@ -18,6 +18,6 @@
         } else {
             //Sikertelen azonosítás
             $_SESSION['error'] = "Helytelen felhasználónév vagy jelszó!";
-            die("Nem léptél be!");
+            header('Location: index.php');
         }
     }
