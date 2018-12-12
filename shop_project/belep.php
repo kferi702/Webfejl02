@@ -15,9 +15,10 @@
             //Sikeres azonosítás
             $row = $res->fetch_row();
             $_SESSION['uid'] = $row['id'];
-            
+            die('Beléptél!');
         } else {
             //Sikertelen azonosítás
             $_SESSION['error'] = "Helytelen felhasználónév vagy jelszó!";
+            die("Nem léptél be!");
         }
     }
