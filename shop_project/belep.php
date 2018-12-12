@@ -12,11 +12,13 @@
         
         if ($res->num_rows == 1) {
             //Sikeres azonosítás
+            
             $row = $res->fetch_row();
             $_SESSION['uid'] = $row[0];
             header('Location: index.php');
         } else {
             //Sikertelen azonosítás
+            
             $_SESSION['error'] = "Helytelen felhasználónév vagy jelszó!";
             header('Location: index.php');
         }
