@@ -1,4 +1,5 @@
 <?php
+    require_once('config/connect.php');
     session_start();
     
     if (isset($_SESSION['uid'])) {
@@ -21,6 +22,9 @@
                     echo $menu;
                 ?>
             </nav>
+            <?php
+                
+            ?>
         </div>
     </body>
 </html>
