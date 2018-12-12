@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Regisztráció | Webshop</title>
+        <link rel="icon" href="favicon/shopping_cart.png" type="image/x-icon"/>
     </head>
     <body>
         <?php

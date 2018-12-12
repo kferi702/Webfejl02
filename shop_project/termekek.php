@@ -43,6 +43,7 @@
         <meta charset="utf-8" />
         <title>Belépés | Webshop</title>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="icon" href="favicon/shopping_cart.png" type="image/x-icon"/>
     </head>
     <body>
         <div id="content">
