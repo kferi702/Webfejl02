@@ -2,7 +2,7 @@
 <html lang="hu">
     <head>
         <meta charset="utf-8" />
-        <title></title>
+        <title>Bejelentkezés | Webshop</title>
     </head>
     <body>
         <div id="content">
@@ -15,7 +15,7 @@
                 <form>
                     <input type="text" name="user" placeholder="Felhasznélónév"/>
                     <input type="password" name="password" placeholder="Jelszó"/>
-                    <input type="submit" value="Belépés"/>
+                    <input type="submit" name="submit" value="Belép"/>
                 </form>
             </nav>
         </div>
