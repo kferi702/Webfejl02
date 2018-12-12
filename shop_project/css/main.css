@@ -1,3 +1,13 @@
 nav li{
     display: inline;
 }
+
+nav ul{
+    display: inline;
+    padding: 0;
+}
+
+nav form{
+    display: inline;
+    float: right;
+}
