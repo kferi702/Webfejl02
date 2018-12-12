@@ -1,5 +1,11 @@
 <?php
-    $connection = new mysqli("127.0.0.1", "root", "", "esti_shop", "3306");
+    $server = "localhost";
+    $username = "esti_szoftverf";
+    $password = "esti_szoftverf";
+    $database = "esti_shop";
+    $port = "3306";
+    
+    $connection = new mysqli($server, $username, $password, $database, $port);
     
     if ($connection -> connect_errno) {
         die("Nem sikerült csatlakozni az adatbázishoz!");
