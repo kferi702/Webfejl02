@@ -13,7 +13,7 @@
                     <li><a href="">Termékek</a></li>
                     <li><a href="">Regisztráció</a></li>
                 </ul>
-                <form>
+                <form method="post" action="belep.php">
                     <input type="text" name="user" placeholder="Felhasznélónév"/>
                     <input type="password" name="password" placeholder="Jelszó"/>
                     <input type="submit" name="submit" value="Belép"/>
