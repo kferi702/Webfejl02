@@ -13,7 +13,16 @@
     
     if ($res) {
         
-        $tabla = "<table>";
+        $tabla = "<table id='products'>"
+                . "<tr>"
+                . "<td>ID</td>"
+                . "<td>Megnevezés</td>"
+                . "<td>Feszültség</td>"
+                . "<td>Teljesítmény</td>"
+                . "<td>Foglalat</td>"
+                . "<td>Élettartam</td>"
+                . "<td>Ár</td>"
+                . "</tr>";
         while ($row = $res->fetch_assoc()){
             $tabla.="<tr>"
             . "<td>{$row['tazon']}</td>"

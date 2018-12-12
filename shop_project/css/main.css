@@ -31,3 +31,7 @@ nav a{
 nav a:hover{
     font-weight: bold;
 }
+
+#products tr td{
+    border-bottom: 1px solid black;
+}
