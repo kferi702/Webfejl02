@@ -11,7 +11,7 @@
                 <ul>
                     <li><a href="index.php">Főoldal</a></li>
                     <li><a href="">Termékek</a></li>
-                    <li>Regisztráció</li>
+                    <li><a href="">Regisztráció</a></li>
                 </ul>
                 <form>
                     <input type="text" name="user" placeholder="Felhasznélónév"/>
