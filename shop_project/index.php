@@ -17,7 +17,9 @@
     <body>
         <div id="content">
             <nav>
-                
+                <?php
+                    echo $menu;
+                ?>
             </nav>
         </div>
     </body>
