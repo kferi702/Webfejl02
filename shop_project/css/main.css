@@ -32,6 +32,11 @@ nav a:hover{
     font-weight: bold;
 }
 
+#products{
+    width: 800px;
+    margin: 2em auto 0 auto;
+}
+
 #products tr td{
     border-bottom: 1px solid black;
 }
