@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8" />
         <title></title>
     </head>
     <body>
-        <?php
-            
-        ?>
+        <div id="content">
+            <nav>
+                <ul>
+                    <li><a href="index.php">Főoldal</a></li>
+                    <li><a href="">Termékek</a></li>
+                    <li>Regisztráció</li>
+                </ul>
+            </nav>
+        </div>
     </body>
 </html>
