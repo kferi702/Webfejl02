@@ -1,3 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    padding: 16px;
+    height: 60px;
+    background-color: #2e2eb8;
+}
+
 nav li{
     display: inline;
 }
@@ -10,4 +21,9 @@ nav ul{
 nav form{
     display: inline;
     float: right;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
 }
