@@ -53,6 +53,16 @@
                 ?>
             </nav>
             <?php
+                $sql = "SELECT DISTINCT foglalat FROM termekek";
+                $res = $connection->query($sql);
+                if ($res) {
+                    $urlap = "<form method='get' action='termekek.php'>";
+                    while () {
+                        
+                    }
+                    
+                    $urlap.="</form><input type='submit' value='Szűrés' name='szures'>";
+                }
                 echo $tabla;
             ?>
         </div>
