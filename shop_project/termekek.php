@@ -57,12 +57,13 @@
                 $res = $connection->query($sql);
                 if ($res) {
                     $urlap = "<form method='get' action='termekek.php'>";
-                    while () {
-                        
+                    $urlap.="<select name='foglalat'>";
+                    while ($row = $res->fetch_row()) {
+                        $urlap .= "<option>{$row[0]}</option>";
                     }
-                    
-                    $urlap.="</form><input type='submit' value='Szűrés' name='szures'>";
+                    $urlap.="</select></form><input type='submit' value='Szűrés' name='szures'/>";
                 }
+                echo $urlap;
                 echo $tabla;
             ?>
         </div>
