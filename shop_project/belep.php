@@ -7,4 +7,6 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         
-}
+        $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+        $res = $connection->query($sql);
+    }

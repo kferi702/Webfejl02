@@ -7,7 +7,7 @@
     
     $connection = new mysqli($server, $username, $password, $database, $port);
     
-    if ($connection -> connect_errno) {
+    if ($connection->connect_errno) {
         die("Nem sikerült csatlakozni az adatbázishoz!".$connection->connect_error);
     }
     
