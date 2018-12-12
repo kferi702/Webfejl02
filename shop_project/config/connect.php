@@ -8,7 +8,7 @@
     $connection = new mysqli($server, $username, $password, $database, $port);
     
     if ($connection -> connect_errno) {
-        die("Nem sikerült csatlakozni az adatbázishoz!");
+        die("Nem sikerült csatlakozni az adatbázishoz!".$connection->connect_error);
     }
     
     $connection->set_charset("utf8");
