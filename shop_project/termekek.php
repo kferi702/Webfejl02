@@ -11,18 +11,25 @@
     }
     
     $sql = "SELECT * FROM termekek";
-    $res=$connection->query($sql);
+    $res = $connection->query($sql);
     $numRows = $res->num_rows;
+    
+    if(isset($_GET['termekszam'])){
+        //megjelenítendő sorok száma
+        $tszam = $_GET['termekszam'];
+    } else {
+        $tszam = 25;
+    }
     
     if (isset($_GET['page'])) {
         //lapoz a user
-        $page = ($_GET['page'] - 1) * 25;
+        $page = ($_GET['page'] - 1) * $tszam;
     } else {
         // default value
         $page = 0;
     }
     
-    $sql = "SELECT * FROM termekek LIMIT $page,25;";
+    $sql = "SELECT * FROM termekek LIMIT $page,$tszam;";
     $res = $connection->query($sql);
     
     //dumpAndDie($res);
@@ -85,7 +92,7 @@
                 $oldalak = "";
                 
                 for ($i=1; $i<=$pages; $i++){
-                    $oldalak .= "<a href='termekek.php?page={$i}'>{$i}</a>";
+                    $oldalak .= "<a href='termekek.php?page={$i}&termekszam={$tszam}'>{$i}</a>";
                 }
                 
                 echo '<div id="szures" >';
