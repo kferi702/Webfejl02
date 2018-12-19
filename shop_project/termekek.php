@@ -14,7 +14,15 @@
     $res=$connection->query($sql);
     $numRows = $res->num_rows;
     
-    $sql = "SELECT * FROM termekek LIMIT 0,25;";
+    if (isset($_GET['page'])) {
+        //lapoz a user
+        $page = ($_GET['page'] - 1) * 25;
+    } else {
+        // default value
+        $page = 0;
+    }
+    
+    $sql = "SELECT * FROM termekek LIMIT $page,25;";
     $res = $connection->query($sql);
     
     //dumpAndDie($res);
