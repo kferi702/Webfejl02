@@ -25,7 +25,7 @@
         $tszam = $_GET['termekszam'];
         $foglalat = $_GET['foglalat'];
     } else {
-        $tszam = 25;
+        $tszam = $numRows;
         
     }
     if (isset($_GET['page'])) {
@@ -34,10 +34,9 @@
     } else {
         // default value
         $page = 0;
-        $foglalat = "%";
     }
     
-    $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat' LIMIT $page, $tszam;";
+    $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat' LIMIT $page,$tszam;";
     $res = $connection->query($sql);
     
     //dumpAndDie($res);
@@ -84,13 +83,13 @@
                 ?>
             </nav>
             <?php
-                $pages = ceil($numRows/$tszam);
+                $pages = ceil($numRows/$tszam); //oldalak száma
                 $sql = "SELECT DISTINCT foglalat FROM termekek";
                 $res = $connection->query($sql);
                 if ($res) {
                     $urlap = "<form method='get' action='termekek.php'>"
                             . "termekszam";
-                    
+                    $urlap.="<input type='text' name='page' value='{$page}'/>";
                     $urlap.="<select name='foglalat'>";
                     while ($row = $res->fetch_row()) {
                         $urlap .= "<option>{$row[0]}</option>";
