@@ -76,7 +76,7 @@
                 ?>
             </nav>
             <?php
-                $pages = ceil($numRows/25);
+                $pages = ceil($numRows/$tszam);
                 $sql = "SELECT DISTINCT foglalat FROM termekek";
                 $res = $connection->query($sql);
                 if ($res) {
@@ -91,7 +91,7 @@
                 }
                 $oldalak = "";
                 
-                for ($i = 1; $i <= $pages; $i++){
+                for ($i=1; $i<=$pages; $i++){
                     $oldalak .= "<a href='termekek.php?page={$i}&termekszam={$tszam}'>{$i}</a>";
                 }
                 
