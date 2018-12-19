@@ -21,15 +21,23 @@
         $tszam = 25;
     }
     
+    if(isset($_GET['szures'])){
+        $tszam = $_GET['termekszam'];
+        $foglalat = $_GET['foglalat'];
+    } else {
+        $tszam = 25;
+        
+    }
     if (isset($_GET['page'])) {
         //lapoz a user
         $page = ($_GET['page'] - 1) * $tszam;
     } else {
         // default value
         $page = 0;
+        $foglalat = "%";
     }
     
-    $sql = "SELECT * FROM termekek LIMIT $page,$tszam;";
+    $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat' LIMIT $page, $tszam;";
     $res = $connection->query($sql);
     
     //dumpAndDie($res);
