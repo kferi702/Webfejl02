@@ -40,3 +40,12 @@ nav a:hover{
 #products tr td{
     border-bottom: 1px solid black;
 }
+
+#szures{
+    width: 60%;
+    margin: 0 auto;
+}
+
+#szures a{
+    margin-right: 1em;
+}

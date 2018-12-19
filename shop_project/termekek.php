@@ -73,20 +73,28 @@
                 $sql = "SELECT DISTINCT foglalat FROM termekek";
                 $res = $connection->query($sql);
                 if ($res) {
-                    $urlap = "<form method='get' action='termekek.php'>";
+                    $urlap = "<form method='get' action='termekek.php'>"
+                            . "termekszam";
+                    
                     $urlap.="<select name='foglalat'>";
                     while ($row = $res->fetch_row()) {
                         $urlap .= "<option>{$row[0]}</option>";
                     }
                     $urlap.="</select></form><input type='submit' value='Szűrés' name='szures'/>";
                 }
-                $oldalak="";
+                $oldalak = "";
+                
                 for ($i=1; $i<=$pages; $i++){
                     $oldalak .= "<a href='termekek.php?page={$i}'>{$i}</a>";
                 }
+                
+                echo '<div id="szures" >';
+                $termekszam = file_get_contents('html/termekszam.html');
+                $urlap = str_replace('termekszam', $termekszam, $urlap);
                 echo $urlap;
-                echo $tabla;
                 echo $oldalak;
+                echo '</div>';
+                echo $tabla;
             ?>
         </div>
     </body>
