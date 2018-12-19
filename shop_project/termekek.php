@@ -1,5 +1,7 @@
 <?php
     require_once('config/connect.php');
+    require_once('config/functions.php');
+    
     session_start();
     
     if (isset($_SESSION['uid'])) {
@@ -10,7 +12,7 @@
     
     $sql = "SELECT * FROM termekek LIMIT 0,25;";
     $res = $connection->query($sql);
-    
+    dumpAndDie($res);
     if ($res) {
         
         $tabla = "<table id='products'>"

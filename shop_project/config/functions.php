@@ -1,5 +1,5 @@
 <?php
-    function dd($var){
+    function dumpAndDie($var){
         var_dump($var);
         die();
     }
