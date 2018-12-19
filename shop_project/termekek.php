@@ -91,7 +91,7 @@
                 }
                 $oldalak = "";
                 
-                for ($i=1; $i<=$pages; $i++){
+                for ($i = 1; $i <= $pages; $i++){
                     $oldalak .= "<a href='termekek.php?page={$i}&termekszam={$tszam}'>{$i}</a>";
                 }
                 
