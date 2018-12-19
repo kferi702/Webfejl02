@@ -10,9 +10,15 @@
         $menu = file_get_contents('html/nav_logout.html');
     }
     
+    $sql = "SELECT * FROM termekek";
+    $res=$connection->query($sql);
+    $numRows = $res->num_rows;
+    
     $sql = "SELECT * FROM termekek LIMIT 0,25;";
     $res = $connection->query($sql);
-    dumpAndDie($res);
+    
+    //dumpAndDie($res);
+    
     if ($res) {
         
         $tabla = "<table id='products'>"
@@ -55,6 +61,7 @@
                 ?>
             </nav>
             <?php
+                $pages = ceil($numRows/25);
                 $sql = "SELECT DISTINCT foglalat FROM termekek";
                 $res = $connection->query($sql);
                 if ($res) {
@@ -65,8 +72,13 @@
                     }
                     $urlap.="</select></form><input type='submit' value='Szűrés' name='szures'/>";
                 }
+                $oldalak="";
+                for ($i=1; $i<=$pages; $i++){
+                    $oldalak .= "<a href='termekek.php?page={$i}'>{$i}</a>";
+                }
                 echo $urlap;
                 echo $tabla;
+                echo $oldalak;
             ?>
         </div>
     </body>
