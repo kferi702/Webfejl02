@@ -8,7 +8,7 @@
         $menu = file_get_contents('html/nav_logout.html');
     }
     
-    $sql = "SELECT * FROM termekek";
+    $sql = "SELECT * FROM termekek LIMIT 0,25;";
     $res = $connection->query($sql);
     
     if ($res) {
