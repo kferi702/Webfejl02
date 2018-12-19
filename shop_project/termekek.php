@@ -87,7 +87,7 @@
                     while ($row = $res->fetch_row()) {
                         $urlap .= "<option>{$row[0]}</option>";
                     }
-                    $urlap.="</select></form><input type='submit' value='Szűrés' name='szures'/>";
+                    $urlap.="</select></form><input type='submit' value='Szűrés' name='szures'/></form>";
                 }
                 $oldalak = "";
                 
