@@ -8,4 +8,23 @@
         header('Location: index.php');
     }
     
-    
+    $menu = file_get_contents('html/nav_logout.html');
+?>
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8" />
+        <title>Belépés | Webshop</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="icon" href="favicon/shopping_cart.png" type="image/x-icon"/>
+    </head>
+    <body>
+        <div id="content">
+            <nav>
+                <?php
+                    echo $menu;
+                ?>
+            </nav>
+        </div>
+    </body>
+</html>
