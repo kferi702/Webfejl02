@@ -14,8 +14,9 @@
     $res = $connection->query($sql);
     $numRows = $res->num_rows;
     
+    // Megjelenítendő termékek darabszáma
     if(isset($_GET['termekszam'])){
-        //megjelenítendő sorok száma
+        // Megjelenítendő sorok száma
         if ($_GET['termekszam'] == 'Mind') {
             $tszam = $numRows;
         }
@@ -34,10 +35,10 @@
     }
     
     if (isset($_GET['page']) &&($_GET['page'] > 0)) {
-        //lapoz a user
+        // Lapoz a user
         $page = ($_GET['page'] - 1) * $tszam;
     } else {
-        // default value
+        // Alapérték
         $page = 0;
     }
     
@@ -50,7 +51,7 @@
     $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat' LIMIT $page,$tszam;";
     $res = $connection->query($sql);
     
-    //dumpAndDie($res);
+    // dumpAndDie($res);
     
     if ($res) {
         
