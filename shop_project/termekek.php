@@ -16,6 +16,10 @@
     
     if(isset($_GET['termekszam'])){
         //megjelenítendő sorok száma
+        if ($_GET['termekszam'] == 'mind') {
+            $tszam = $numRows;
+        }
+        
         $tszam = $_GET['termekszam'];
     } else {
         $tszam = 25;
@@ -28,7 +32,8 @@
         $tszam = $numRows;
         
     }
-    if (isset($_GET['page'])) {
+    
+    if (isset($_GET['page']) &&($_GET['pahe'] > 0)) {
         //lapoz a user
         $page = ($_GET['page'] - 1) * $tszam;
     } else {
