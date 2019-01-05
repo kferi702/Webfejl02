@@ -4,7 +4,7 @@
         die();
     }
     
-    function readPost($input, $message){
+    function readPost($input){
         
         if (!empty($_POST[$input])) {            
             return trim($_POST[$input]);

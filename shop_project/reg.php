@@ -26,7 +26,7 @@
                 ?>
             </nav>
             <form id="regForm" method="post" action="regController.php">
-                <input type="text" name="username" placeholder="Felhasználónév" required/>
+                <input type="text" name="username" placeholder="Felhasználónév" required/><?php if (isset($_SESSION['regErr'])) { echo '<span>'.$_SESSION['regErr']['username'].'</span>'; } ?>
                 <br/>
                 <input type="text" name="fullname" placeholder="Teljes név" required/>
                 <br/>
