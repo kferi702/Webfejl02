@@ -1,9 +1,8 @@
 <?php
+    session_start();
     require_once('config/connect.php');
     require_once('config/functions.php');
-    
-    session_start();
-    
+        
     if (isset($_SESSION['uid'])) {
         $menu = file_get_contents('html/nav_login.html');
     } else {
