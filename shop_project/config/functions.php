@@ -6,8 +6,10 @@
     
     function readPost($input){
         
-        if (!empty($_POST[$input])) {            
-            return trim($_POST[$input]);
+        $temp = trim($_POST[$input]);
+        
+        if (!empty($temp)) {            
+            return $temp;
         } else {
             $_SESSION['regErr'][$input] =  'Kitöltetlen mező!';
         }
