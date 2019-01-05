@@ -58,5 +58,6 @@ nav a:hover{
 
 #regForm > input{
     width: 200px;
-    margin: 1em;
+    margin: 0.5em;
+    border-radius: 5px;
 }

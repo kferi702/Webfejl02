@@ -36,9 +36,9 @@
                 <br/>
                 <input type="email" name="email" placeholder="valaki@vasvari.hu" required/>
                 <br/>
-                <input type="number" name="irszam" placeholder="irányítószám" required/>
+                <input type="number" name="irszam" placeholder="Irányítószám" required/>
                 <br/>
-                <input type="tel" name="telefon" placeholder="telefonszám" required/>
+                <input type="tel" name="telefon" placeholder="Telefonszám" required/>
                 <br/>
                 <input type="submit" name="reg" placeholder="Regisztráció" required/>
             </form>
