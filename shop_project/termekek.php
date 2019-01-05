@@ -16,7 +16,7 @@
     
     if(isset($_GET['termekszam'])){
         //megjelenítendő sorok száma
-        if ($_GET['termekszam'] == 'mind') {
+        if ($_GET['termekszam'] == 'Mind') {
             $tszam = $numRows;
         }
         
@@ -33,7 +33,7 @@
         
     }
     
-    if (isset($_GET['page']) &&($_GET['pahe'] > 0)) {
+    if (isset($_GET['page']) &&($_GET['page'] > 0)) {
         //lapoz a user
         $page = ($_GET['page'] - 1) * $tszam;
     } else {
@@ -101,12 +101,11 @@
                 if ($res) {
                     $urlap = "<form method='get' action='termekek.php'>"
                             . "termekszam";
-                    $urlap.="<input type='text' name='page' value='{$page}'/>";
                     $urlap.="<select name='foglalat'>";
                     while ($row = $res->fetch_row()) {
                         $urlap .= "<option>{$row[0]}</option>";
                     }
-                    $urlap.="</select></form><input type='submit' value='Szűrés' name='szures'/></form>";
+                    $urlap.="</select><input type='submit' value='Szűrés' name='szures'/></form>";
                 }
                 $oldalak = "";
                 
