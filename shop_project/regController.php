@@ -21,5 +21,8 @@
     }
     
     $sql = "INSERT INTO user (username, password, reg_date, active) VALUES ('$username', '12345', 'CURDATE()')";
+    $res = $connection->query($sql);
+    
+    $_SESSION['siker'] = true;    
     header('Location: reg.php');
     

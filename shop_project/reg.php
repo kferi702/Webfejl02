@@ -43,5 +43,10 @@
                 <input type="submit" name="reg" placeholder="Regisztráció" required/>
             </form>
         </div>
+        <?php
+            if (isset($_SESSION['siker'])){
+                echo '<h1 style="color: red">Sikeres regisztráció!</h1>';
+            }
+        ?>
     </body>
 </html>
