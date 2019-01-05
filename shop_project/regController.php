@@ -1,7 +1,7 @@
 <?php
-    require_once('config/functions.php');
     session_start();
     $_SESSION['regErr'] = [];
+    require_once('config/functions.php');
     
     if (!isset($_POST['reg'])) {
         header('Location: index.php');
@@ -9,10 +9,11 @@
     }
     
     $username = readPost('username');
-    $password = readPost('password');
+
+    header('Location: reg.php');
     $passwordConfirm = readPost('passwordConfirm');
     $email = readPost('email');
     $irszam = readPost('irszam');
     $telephone = readPost('telefon');
-    header('Location: reg.php');
+    $password = readPost('password');
     
