@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="hu">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8"/>
         <title>Belépés | Webshop</title>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <link rel="icon" href="favicon/shopping_cart.png" type="image/x-icon"/>
@@ -25,6 +25,11 @@
                     echo $menu;
                 ?>
             </nav>
+            <form>
+                <input type="text" name="username" placeholder="Felhasználónév" required/>
+                <input type="password" name="password" placeholder="Jelszó" required/>
+                <input type="" name="" placeholder="" required/>
+            </form>
         </div>
     </body>
 </html>
