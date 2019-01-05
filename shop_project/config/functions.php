@@ -4,11 +4,12 @@
         die();
     }
     
-    function readPost($input){
+    function readPost($input, $message){
         
-        if (!empty($_POST[$input])) {
-            
+        if (!empty($_POST[$input])) {            
             return trim($_POST[$input]);
+        } else {
+            $_SESSION['regErr'][$input] =  'Kitöltetlen mező!';
         }
     }
     
