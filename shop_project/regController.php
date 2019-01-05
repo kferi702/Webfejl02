@@ -9,11 +9,5 @@
     }
     
     $username = readPost('username');
-
     header('Location: reg.php');
-    $passwordConfirm = readPost('passwordConfirm');
-    $email = readPost('email');
-    $irszam = readPost('irszam');
-    $telephone = readPost('telefon');
-    $password = readPost('password');
     
