@@ -32,7 +32,7 @@
                 <br/>
                 <input type="password" name="password" placeholder="Jelszó" required/>
                 <br/>
-                <input type="password" name="passwordC" placeholder="Jelszó megerősítése" required/>
+                <input type="password" name="passwordConfirm" placeholder="Jelszó megerősítése" required/>
                 <br/>
                 <input type="email" name="email" placeholder="valaki@vasvari.hu" required/>
                 <br/>
