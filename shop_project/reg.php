@@ -25,7 +25,7 @@
                     echo $menu;
                 ?>
             </nav>
-            <form id="regForm" method="post" action="#">
+            <form id="regForm" method="post" action="regController.php">
                 <input type="text" name="username" placeholder="Felhasználónév" required/>
                 <br/>
                 <input type="text" name="fullname" placeholder="Teljes név" required/>
