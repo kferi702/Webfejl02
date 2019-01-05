@@ -49,3 +49,14 @@ nav a:hover{
 #szures a{
     margin-right: 1em;
 }
+
+#regForm{
+    width: 200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+#regForm > input{
+    width: 200px;
+    margin: 1em;
+}

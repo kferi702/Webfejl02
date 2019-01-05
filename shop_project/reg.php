@@ -25,10 +25,22 @@
                     echo $menu;
                 ?>
             </nav>
-            <form>
+            <form id="regForm" method="post" action="#">
                 <input type="text" name="username" placeholder="Felhasználónév" required/>
+                <br/>
+                <input type="text" name="fullname" placeholder="Teljes név" required/>
+                <br/>
                 <input type="password" name="password" placeholder="Jelszó" required/>
-                <input type="" name="" placeholder="" required/>
+                <br/>
+                <input type="password" name="passwordC" placeholder="Jelszó megerősítése" required/>
+                <br/>
+                <input type="email" name="email" placeholder="valaki@vasvari.hu" required/>
+                <br/>
+                <input type="number" name="irszam" placeholder="irányítószám" required/>
+                <br/>
+                <input type="tel" name="telefon" placeholder="telefonszám" required/>
+                <br/>
+                <input type="submit" name="reg" placeholder="Regisztráció" required/>
             </form>
         </div>
     </body>
