@@ -41,6 +41,12 @@
         $page = 0;
     }
     
+    if (isset($_GET['foglalat'])) {
+        
+        
+        
+    }
+    
     $foglalat= '%';
     $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat' LIMIT $page,$tszam;";
     $res = $connection->query($sql);
@@ -105,7 +111,7 @@
                 $oldalak = "";
                 
                 for ($i=1; $i<=$pages; $i++){
-                    $oldalak .= "<a href='termekek.php?page={$i}&termekszam={$tszam}'>{$i}</a>";
+                    $oldalak .= "<a href='termekek.php?page={$i}&termekszam={$tszam}'&foglalat={$foglalat}>{$i}</a>";
                 }
                 
                 echo '<div id="szures" >';
