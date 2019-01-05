@@ -41,13 +41,12 @@
         $page = 0;
     }
     
-    if (isset($_GET['foglalat'])) {
-        
-        
-        
+    if (isset($_GET['foglalat']) && ($_GET['foglalat'] != '-')) {
+        $foglalat = $_GET['foglalat'];
+    } else {
+        $foglalat='%';
     }
     
-    $foglalat= '%';
     $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat' LIMIT $page,$tszam;";
     $res = $connection->query($sql);
     
