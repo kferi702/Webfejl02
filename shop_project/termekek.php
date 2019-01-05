@@ -41,6 +41,7 @@
         $page = 0;
     }
     
+    $foglalat= '%';
     $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat' LIMIT $page,$tszam;";
     $res = $connection->query($sql);
     
