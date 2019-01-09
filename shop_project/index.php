@@ -1,27 +1,31 @@
 <?php
     session_start();
-    
-    if (isset($_SESSION['uid'])) {
-        $menu = file_get_contents('html/nav_login.html');
+    if (isset($_SESSION['uid'])){
+        $menu = file_get_contents("html/nav_in.html");
     } else {
-        $menu = file_get_contents('html/nav_logout.html');
+        $menu = file_get_contents("html/nav_out.html");
     }
 ?>
 <!DOCTYPE html>
-<html lang="hu">
+<html>
     <head>
-        <meta charset="utf-8" />
-        <title>Belépés | Webshop</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="icon" href="favicon/shopping_cart.png" type="image/x-icon"/>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/shop.css" >
     </head>
     <body>
         <div id="content">
             <nav>
-                <?php
-                    echo $menu;
-                ?>
+               <?php
+                echo $menu;
+               ?>
             </nav>
+            
         </div>
+        
+        
+        <?php
+        // put your code here
+        ?>
     </body>
 </html>

@@ -2,58 +2,42 @@
     session_start();
     require_once('config/connect.php');
     require_once('config/functions.php');
-        
-    if (isset($_SESSION['uid'])) {
-        $menu = file_get_contents('html/nav_login.html');
+    if (isset($_SESSION['uid'])){
+        $menu = file_get_contents("html/nav_in.html");
     } else {
-        $menu = file_get_contents('html/nav_logout.html');
+        $menu = file_get_contents("html/nav_out.html");
     }
-    
-    $sql = "SELECT * FROM termekek";
-    $res = $connection->query($sql);
-    $numRows = $res->num_rows;
-    
-    // Megjelenítendő termékek darabszáma
-    if(isset($_GET['termekszam'])){
-        // Megjelenítendő sorok száma
-        if ($_GET['termekszam'] == 'Mind') {
-            $tszam = $numRows;
-        }
-        
+//megjelenítendő termékek darabszáma   
+    if (isset($_GET['termekszam']) && ($_GET['termekszam'] != "mind")){
+        //megjelenítendő sorok száma
         $tszam = $_GET['termekszam'];
     } else {
         $tszam = 25;
     }
-    
-    if(isset($_GET['szures'])){
-        $tszam = $_GET['termekszam'];
-        $foglalat = $_GET['foglalat'];
-    } else {
-        $tszam = $numRows;
         
-    }
-    
-    if (isset($_GET['page']) &&($_GET['page'] > 0)) {
-        // Lapoz a user
+//A hivatkozásokkal jön létre. Hányadik oldalon vagyok?
+    if (isset($_GET['page']) && ($_GET['page'] > 0)){
+        // lapoz a látogató
         $page = ($_GET['page'] - 1) * $tszam;
     } else {
-        // Alapérték
+        //alapértelmezett
         $page = 0;
     }
-    
-    if (isset($_GET['foglalat']) && ($_GET['foglalat'] != '-')) {
-        $foglalat = $_GET['foglalat'];
+//foglalat megállapítása
+    if (isset($_GET['foglalat']) && ($_GET['foglalat'] != "-")){
+        $foglalat = $_GET['foglalat'];    
     } else {
-        $foglalat='%';
+        $foglalat = '%';    
     }
+//kevesebb termékszám alapján a rekordok megszámlálása    
+    $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat';";
+    $res = $conn -> query($sql);
+    $numRows = $res -> num_rows;
     
     $sql = "SELECT * FROM termekek WHERE foglalat LIKE '$foglalat' LIMIT $page,$tszam;";
-    $res = $connection->query($sql);
+    $res = $conn -> query($sql);
     
-    // dumpAndDie($res);
-    
-    if ($res) {
-        
+    if ($res){
         $tabla = "<table id='products'>"
                 . "<tr>"
                 . "<td>ID</td>"
@@ -64,9 +48,9 @@
                 . "<td>Élettartam</td>"
                 . "<td>Ár</td>"
                 . "</tr>";
-        while ($row = $res->fetch_assoc()){
-            $tabla.="<tr>"
-            . "<td>{$row['tazon']}</td>"
+        while ($row = $res -> fetch_assoc()){
+            $tabla .= "<tr>"
+            . "<td>".$row['tazon']."</td>"
             . "<td>{$row['tnev']}</td>"
             . "<td>{$row['fesz']}</td>"
             . "<td>{$row['telj']}</td>"
@@ -75,51 +59,60 @@
             . "<td>{$row['ar']}</td>"
             . "</tr>";
         }
-        $tabla.="</table>";
+        $tabla .= "</table>";
     }
 ?>
 <!DOCTYPE html>
 <html lang="hu">
     <head>
-        <meta charset="utf-8" />
-        <title>Belépés | Webshop</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="icon" href="favicon/shopping_cart.png" type="image/x-icon"/>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/shop.css" >
     </head>
     <body>
         <div id="content">
             <nav>
-                <?php
-                    echo $menu;
-                ?>
+               <?php
+                echo $menu; //menü megjelenítése
+                
+               ?>
             </nav>
             <?php
-                $pages = ceil($numRows/$tszam); //oldalak száma
+                $pages = ceil($numRows / $tszam); //oldalak száma
+                
                 $sql = "SELECT DISTINCT foglalat FROM termekek";
-                $res = $connection->query($sql);
-                if ($res) {
+                $res = $conn -> query($sql);
+                if ($res){
                     $urlap = "<form method='get' action='termekek.php'>"
-                            . "termekszam";
-                    $urlap.="<select name='foglalat'>";
-                    while ($row = $res->fetch_row()) {
-                        $urlap .= "<option>{$row[0]}</option>";
+                            . "termekszam";   
+                    //$urlap .="<input type='text' name='page' value='{$pages}' >";
+                    $urlap .="<select name='foglalat'>";
+                    $urlap .="<option>-</option>";
+                    while ($row = $res -> fetch_row()){
+                        $urlap .="<option>{$row[0]}</option>";
+                        
                     }
-                    $urlap.="</select><input type='submit' value='Szűrés' name='szures'/></form>";
+                    $urlap .= "</select>"
+                            . "<input type='submit' value='Szűrés' name='szures'>"
+                            . "</form>";
                 }
                 $oldalak = "";
-                
-                for ($i=1; $i<=$pages; $i++){
-                    $oldalak .= "<a href='termekek.php?page={$i}&termekszam={$tszam}'&foglalat={$foglalat}>{$i}</a>";
+                for ($i = 1; $i <= $pages; $i++){
+                    $oldalak .= "<a href='termekek.php?page={$i}&termekszam={$tszam}&foglalat={$foglalat}'>{$i}</a>";
                 }
-                
-                echo '<div id="szures" >';
+                echo "<div id='szures' >";
                 $termekszam = file_get_contents('html/termekszam.html');
-                $urlap = str_replace('termekszam', $termekszam, $urlap);
+                $urlap = str_replace('termekszam',$termekszam,$urlap);
                 echo $urlap;
                 echo $oldalak;
-                echo '</div>';
-                echo $tabla;
+                echo "</div>";
+                echo $tabla;  
+                
             ?>
+            
         </div>
+        
+        
+        
     </body>
 </html>

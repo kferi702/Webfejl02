@@ -1,63 +1,56 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
-
 nav{
     padding: 16px;
     background-color: #2e2eb8;
+    
+    
 }
-
 nav li{
     display: inline;
 }
-
 nav ul{
     display: inline;
     padding: 0;
 }
-
-nav form{
-    display: inline;
+nav form {
+    
     float: right;
 }
-
 nav a{
     color: white;
     text-decoration: none;
     padding: 0.5em;
+    margin: 0.5em;
 }
-
 nav a:hover{
     font-weight: bold;
 }
-
-#products{
+#products {
+    
     width: 800px;
     margin: 2em auto 0 auto;
 }
-
 #products tr td{
     border-bottom: 1px solid black;
+    border-collapse: collapse;
 }
-
 #szures{
     width: 60%;
-    margin: 0 auto;
+    margin: 1em auto;
 }
-
 #szures a{
     margin-right: 1em;
 }
-
 #regForm{
     width: 200px;
     margin: 0 auto;
     padding: 1em;
 }
-
-#regForm > input{
+#regForm input{
     width: 200px;
     margin: 0.5em;
-    border-radius: 5px;
+    border-radius: 10px;
 }

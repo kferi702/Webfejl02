@@ -1,52 +1,31 @@
 <?php
     session_start();
+    $_SESSION['regErr'] = [];
+    require_once("config/functions.php");
     require_once('config/connect.php');
-    require_once('config/functions.php');
-    
-    // Ha már bejelentkezett (böngészőből előzményben eljuthat erre az URL-re
-    if (isset($_SESSION['uid'])) {
-        header('Location: index.php');
+    if (!isset($_POST['regisztracio'])){
+       header("Location: index.php");
+       die();
+    }
+    $username = readPost('username');
+    /* TODO
+    fullname
+    pwd
+    pwdc
+    email
+    irsz
+    tel
+*/
+    $sql = "SELECT username FROM user WHERE username = '$username'";
+    $res = $conn -> query($sql);
+    if ($res -> num_rows > 0){
+        $_SESSION['regErr']['username'] = 'Már létezik ilyen felhasználó!';
+        header("Location: regisztracio.php");
     }
     
-    $menu = file_get_contents('html/nav_logout.html');
-?>
-<!DOCTYPE html>
-<html lang="hu">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Belépés | Webshop</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="icon" href="favicon/shopping_cart.png" type="image/x-icon"/>
-    </head>
-    <body>
-        <div id="content">
-            <nav>
-                <?php
-                    echo $menu;
-                ?>
-            </nav>
-            <form id="regForm" method="post" action="regController.php">
-                <input type="text" name="username" placeholder="Felhasználónév" required/><?php if (isset($_SESSION['regErr'])) { echo '<span>'.$_SESSION['regErr']['username'].'</span>'; } ?>
-                <br/>
-                <input type="text" name="fullname" placeholder="Teljes név" required/>
-                <br/>
-                <input type="password" name="password" placeholder="Jelszó" required/>
-                <br/>
-                <input type="password" name="passwordConfirm" placeholder="Jelszó megerősítése" required/>
-                <br/>
-                <input type="email" name="email" placeholder="valaki@vasvari.hu" required/>
-                <br/>
-                <input type="number" name="irszam" placeholder="Irányítószám" required/>
-                <br/>
-                <input type="tel" name="telefon" placeholder="Telefonszám" required/>
-                <br/>
-                <input type="submit" name="reg" placeholder="Regisztráció" required/>
-            </form>
-        </div>
-        <?php
-            if (isset($_SESSION['siker'])){
-                echo '<h1 style="color: red">Sikeres regisztráció!</h1>';
-            }
-        ?>
-    </body>
-</html>
+    $sql = "INSERT INTO user (username,password,reg_date,active) VALUES ('$username','123456',CURDATE(),1)";
+    $res = $conn -> query($sql);
+    
+    $_SESSION['siker'] = true;
+    header("Location: regisztracio.php");
+    

@@ -1,14 +1,14 @@
 <?php
-    $server = "localhost";
-    $username = "esti_szoftverf";
-    $password = "esti_szoftverf";
-    $database = "esti_shop";
-    $port = "3306";
-    
-    $connection = new mysqli($server, $username, $password, $database, $port);
-    
-    if ($connection->connect_errno) {
-        die("Nem sikerült csatlakozni az adatbázishoz!".$connection->connect_error);
-    }
-    
-    $connection->set_charset("utf8");
+$server = "localhost";
+$user = "root";
+$password = "";
+$dbName = "shop";
+$port = "3306";
+$conn = new mysqli($server,$user,$password,$dbName,$port);
+if ($conn -> connect_errno){
+    die("Nem sikerült csatlakozni!".$conn -> connect_error);
+}
+$conn ->set_charset("utf8");
+
+
+
