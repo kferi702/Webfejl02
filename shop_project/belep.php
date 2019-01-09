@@ -5,31 +5,21 @@ require_once('config/connect.php');
 if (isset($_POST['submit'])) {
     $userName = $_POST['user'];
     $pwd = $_POST['password'];
-    $sql = "SELECT username, password FROM user WHERE username = '$userName'";
+    $sql = "SELECT id, username, password FROM user WHERE username = '$userName'";
     $res = $conn->query($sql);
 
     if ($res->num_rows == 1) {
         $row = $res->fetch_row();
-        $userDb = $row[0];
-        $hash = $row[1];
+        $userDb = $row[1];
+        $hash = $row[2];
 
         if (password_verify($pwd, $hash)) {
             // Belépett a felhasználó
+
+            $_SESSION['uid'] = $row[0];
         } else {
             // Helytelen felhasználó vagy jelszó
-            
+            $_SESSION['error'] = 'Helytelen felhasználónév vagy jelszó!';
         }
     }
-
-    if ($res->num_rows == 1) {
-        //Sikeres azonosítás
-        $row = $res->fetch_row();
-        $_SESSION['uid'] = $row[0];
-        //die('Beléptél');
-    } else {
-        //Sikertelen azonosítás
-        $_SESSION['error'] = 'Helytelen felhasználónév vagy jelszó!';
-        //die("Nem létél be!");
-    }
-    header('Location: index.php');
 }
