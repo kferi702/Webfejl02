@@ -44,12 +44,10 @@ $menu = file_get_contents("html/nav_out.html");
                 <input type="submit" value="Regisztráció" name="regisztracio">
             </form>
         </div>
-<?php
-if (isset($_SESSION['siker'])) {
-    echo "<h1 style='color: red; text-align: center'>Sikeres regisztráció!</h1>";
-}
-?>
-
-
+        <?php
+        if (isset($_SESSION['siker'])) {
+            echo "<h1 style='color: red; text-align: center'>Sikeres regisztráció!</h1>";
+        }
+        ?>
     </body>
 </html>
