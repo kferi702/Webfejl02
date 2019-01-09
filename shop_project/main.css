@@ -28,3 +28,19 @@ section{
     padding: 50px;
     min-height: 400px;
 }
+.kepszoveg{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 32px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.kepszoveg span{
+    background-color: #111;
+    color: #fff;
+    opacity: 0.6;
+    padding: 20px;
+}
