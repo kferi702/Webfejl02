@@ -28,7 +28,7 @@ if ($res->num_rows > 0) {
 $pwd = readPost('password');
 $pwd = password_hash($pwd, PASSWORD_BCRYPT);
 $_SESSION['regErr']['username'] = "";
-$sql = "INSERT INTO user (username, password, reg_date, active) VALUES ('$username', $pwd, CURDATE(), 1)";
+$sql = "INSERT INTO user (username, password, reg_date, active) VALUES ('$username', '$pwd', CURDATE(), 1)";
 $res = $conn->query($sql);
 
 $_SESSION['siker'] = true;
