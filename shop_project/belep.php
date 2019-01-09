@@ -21,5 +21,7 @@ if (isset($_POST['submit'])) {
             // Helytelen felhasználó vagy jelszó
             $_SESSION['error'] = 'Helytelen felhasználónév vagy jelszó!';
         }
+
+        header('Location: index.php');
     }
 }
