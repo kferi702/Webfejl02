@@ -1,10 +1,10 @@
 <?php
-    session_start();
-    if (isset($_SESSION['uid'])){
-        $menu = file_get_contents("html/nav_in.html");
-    } else {
-        $menu = file_get_contents("html/nav_out.html");
-    }
+session_start();
+if (isset($_SESSION['uid'])) {
+    $menu = file_get_contents("html/nav_in.html");
+} else {
+    $menu = file_get_contents("html/nav_out.html");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,16 +16,10 @@
     <body>
         <div id="content">
             <nav>
-               <?php
+                <?php
                 echo $menu;
-               ?>
+                ?>
             </nav>
-            
         </div>
-        
-        
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>

@@ -1,12 +1,12 @@
 <?php
-    session_start();
-    require_once('config/connect.php');
-    require_once('config/functions.php');
+session_start();
+require_once('config/connect.php');
+require_once('config/functions.php');
 //Ha már bejelentkezett
-    if (isset($_SESSION['uid'])){
-        header("Location: index.php");
-    }
-    $menu = file_get_contents("html/nav_out.html");
+if (isset($_SESSION['uid'])) {
+    header("Location: index.php");
+}
+$menu = file_get_contents("html/nav_out.html");
 ?>    
 <!DOCTYPE html>
 <html lang="hu">
@@ -18,19 +18,15 @@
     <body>
         <div id="content">
             <nav>
-               <?php
+                <?php
                 echo $menu; //menü megjelenítése
-                
-               ?>
+                ?>
             </nav>
             <form id="regForm" method="post" action="reg.php">
-                <input type="text" name="username" placeholder="Felhasználónév" required><?php 
-                    
-                    if (isset($_SESSION['regErr'])){
-                        echo "<span>".$_SESSION['regErr']['username']."</span>";
-                        
-                        
-                    }
+                <input type="text" name="username" placeholder="Felhasználónév" required><?php
+                if (isset($_SESSION['regErr'])) {
+                    echo "<span>" . $_SESSION['regErr']['username'] . "</span>";
+                }
                 ?>
                 <br>
                 <input type="text" name="fullname" placeholder="Név" required>
@@ -48,12 +44,12 @@
                 <input type="submit" value="Regisztráció" name="regisztracio">
             </form>
         </div>
-        <?php 
-            if (isset($_SESSION['siker'])){
-                echo "<h1 style='color: red; text-align: center'>Sikeres regisztráció!</h1>";
-            }
-        ?>
-        
-        
+<?php
+if (isset($_SESSION['siker'])) {
+    echo "<h1 style='color: red; text-align: center'>Sikeres regisztráció!</h1>";
+}
+?>
+
+
     </body>
 </html>
