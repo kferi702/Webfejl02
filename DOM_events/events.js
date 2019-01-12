@@ -8,9 +8,18 @@ function bovit(){
 }
 
 
-$(document).ready(function(){	
+$(document).ready(function(){
+	
 	$("[name = 'bovitjquery']").click(function(){
 		let val = $('#beformjquery input:first').val();
 		$('#bekezdesjquery').append(val+'<br/>');
+	});
+	
+	$('input').focus(function(){
+		$(this).toggleClass("aktiv");
+	});
+	
+	$('input').blur(function(){
+		$(this).toggleClass("aktiv");
 	});
 });
