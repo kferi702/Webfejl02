@@ -11,6 +11,6 @@ function bovit(){
 $(document).ready(function(){	
 	$("[name = 'bovitjquery']").click(function(){
 		let val = $('#beformjquery input:first').val();
-		$('#bekezdesjquery').html(val);
+		$('#bekezdesjquery').append(val+'<br/>');
 	});
 });
