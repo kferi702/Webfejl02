@@ -11,8 +11,22 @@
 	</style>
 </head>
 <body>
-	
+	<form>
+		<input type="text" id="listaElem" placeholder="Ezzel bővül a lista"/>
+		<input type="button" value="Listához ad" onclick="listahozAd()"/>
+	</form>
+	<ul id="lista">
+	</ul>
 </body>
 </html>
 <script>
+	function listahozAd(){
+		let lista = document.getElementById('lista');
+		let listaElem = document.getElementById('listaElem').value;
+		
+		let t = document.createTextNode(listaElem);
+		let li = document.createElement('li');
+		li.appendChild(t);
+		lista.appendChild(li);
+	}
 </script>
