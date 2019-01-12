@@ -4,5 +4,5 @@ function bovit(){
 	console.log(urlap['szoveg'].value);
 	
 	let p = document.getElementById("bekezdesjs");
-	p.innerHTML = urlap['szoveg'].value;
+	p.innerHTML += urlap['szoveg'].value;
 }
