@@ -17,6 +17,12 @@
 	</form>
 	<ul id="lista">
 	</ul>
+	<form>
+		<input type="text" id="szamozottElem" placeholder="Ezzel bővül a lista"/>
+		<input type="button" value="Listához ad" id="szamozottGomb"/>
+	</form>
+	<ul id="szamozottLista">
+	</ul>
 </body>
 </html>
 <script>
@@ -29,4 +35,12 @@
 		li.appendChild(t);
 		lista.appendChild(li);
 	}
+	
+	$(document).ready(function(){
+		$('#szamozottGomb').click(function(){
+			let ertek = $('#szamozottElem').val();
+			let li = $('<li></li>').html(ertek);
+			$('#szamozottLista').append(li);
+		});
+	});
 </script>
