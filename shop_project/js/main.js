@@ -7,7 +7,7 @@ $(document).ready(function () {
         //Felhasználónév validáció        
         $('#username').blur(function () {
             
-            var input_username = $(this);
+            var input_username = $(this).val();
             var value_input_username = $(input_username).val();
             
             input_username.attr('minlength', '6');
