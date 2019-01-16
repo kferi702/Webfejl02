@@ -15,7 +15,7 @@ $(document).ready(function () {
             var regexp_username = /[^A-Za-z0-9]+/g;
             
             if (regexp_username.test(value_input_username)) {
-                alert("Nem megfelelő a felhasználónév formátuma!");
+                console.log("Nem megfelelő a felhasználónév formátuma!");
             }
             
         });
@@ -27,7 +27,7 @@ $(document).ready(function () {
             
             var regexp_password = /[^A-Za-z0-9]+/g;
             if (regexp_password.test(input_password)) {
-                alert("Nem megfelelő a jelszó formátuma!");
+                console.log("Nem megfelelő a jelszó formátuma!");
             }
             
         });
