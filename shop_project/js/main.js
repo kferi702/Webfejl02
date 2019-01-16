@@ -23,8 +23,7 @@ $(document).ready(function () {
         //Jelszó valid        
         $('#pwd').blur(function () {
             
-            var input_password = $(this);
-            var value_input_password = $(input_password).val();
+            var value_input_password = $(this).val();
             
             var regexp_password = /[^A-Za-z0-9]+/g;
             if (regexp_password.test(value_input_password)) {
