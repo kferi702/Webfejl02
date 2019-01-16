@@ -22,10 +22,11 @@ $(document).ready(function () {
         //Jelszó valid        
         $('#pwd').blur(function () {
 
-            var input_password = $(this).val();
+            var password = $(this).val();
 
             var regexp_password = /[^A-Za-z0-9]+/g;
-            if (regexp_password.test(input_password)) {
+            
+            if (regexp_password.test(password)) {
                 console.log("Nem megfelelő a jelszó formátuma!");
             }
 
