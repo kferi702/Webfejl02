@@ -12,16 +12,14 @@ if (isset($_POST['submit'])) {
         $row = $res->fetch_row();
         $userDb = $row[1];
         $hash = $row[2];
-
         if (password_verify($pwd, $hash)) {
-            // Belépett a felhasználó
-
+            //Belépett a látogató
             $_SESSION['uid'] = $row[0];
         } else {
-            // Helytelen felhasználó vagy jelszó
+            //Hibás belépési adatok
             $_SESSION['error'] = 'Helytelen felhasználónév vagy jelszó!';
         }
-
-        header('Location: index.php');
     }
+
+    header('Location: index.php');
 }
