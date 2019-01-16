@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         //Felhasználónév validáció
         
-        $('#username').keyup(function () {
+        $('#username').blur(function () {
             
             var input_username = $(this);
             var value_input_username = $(input_username).val();
@@ -23,13 +23,16 @@ $(document).ready(function () {
         
         //Jelszó valid
         
-        $('#pwd').keyup(function () {
+        $('#pwd').blur(function () {
+            
             var input_password = $(this);
             var value_input_password = $(input_password).val();
+            
             var regexp_password = /[^A-Za-z0-9]+/g;
             if (regexp_password.test(value_input_password)) {
                 alert("Nem megfelelő a jelszó formátuma!");
             }
+            
         });
 
         // Jelszó megerősítés valid
