@@ -16,7 +16,6 @@ $(document).ready(function () {
             if (regexp_username.test(username)) {
                 console.log("Nem megfelelő a felhasználónév formátuma!");
             }
-
         });
 
         //Jelszó valid        
@@ -29,7 +28,6 @@ $(document).ready(function () {
             if (regexp_password.test(password)) {
                 console.log("Nem megfelelő a jelszó formátuma!");
             }
-
         });
 
         // Jelszó megerősítés valid
