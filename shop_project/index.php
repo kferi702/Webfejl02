@@ -10,10 +10,11 @@ if (isset($_SESSION['uid'])) {
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Webshop</title>
         <link rel="stylesheet" type="text/css" href="css/shop.css"/>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>
+        <link rel="icon" href="img/cart.jpg" type="image/x-icon"/>
     </head>
     <body>
         <div id="content">

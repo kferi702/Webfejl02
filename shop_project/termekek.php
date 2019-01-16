@@ -66,7 +66,8 @@ if ($res) {
 <html lang="hu">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Termékek</title>
+        <link rel="icon" href="img/cart.jpg" type="image/x-icon"/>
         <link rel="stylesheet" type="text/css" href="css/shop.css" >
     </head>
     <body>

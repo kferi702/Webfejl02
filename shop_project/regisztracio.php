@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require_once('config/connect.php');
 require_once('config/functions.php');
@@ -15,6 +14,7 @@ $menu = file_get_contents("html/nav_out.html");
         <meta charset="UTF-8">
         <title>Regisztráció</title>
         <link rel="stylesheet" type="text/css" href="css/shop.css" >
+        <link rel="icon" href="img/cart.jpg" type="image/x-icon"/>
     </head>
     <body>
         <div id="content">
