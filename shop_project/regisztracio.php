@@ -15,6 +15,8 @@ $menu = file_get_contents("html/nav_out.html");
         <title>Regisztráció</title>
         <link rel="stylesheet" type="text/css" href="css/shop.css" >
         <link rel="icon" href="img/cart.jpg" type="image/x-icon"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="content">

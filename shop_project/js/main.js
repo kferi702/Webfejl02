@@ -1,7 +1,7 @@
 $(document).ready(function () {
-
+console.log('Hello');
     //Felhasználónév valid
-    $('#username').keyup(function () {
+    $('#fullname').keyup(function () {
         var input_username = $(this);
         var value_input_username = $(input_username).val();
         input_username.attr('minlength', '8');
