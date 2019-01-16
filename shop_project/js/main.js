@@ -6,14 +6,16 @@ $(document).ready(function () {
 
         //Felhasználónév validáció        
         $('#username').blur(function () {
-
+            
             let username = $(this);
+
+            let username_value = username.val();
 
             username.attr('minlength', '6');
 
             let regexp_username = /[^A-Za-z0-9]+/g;
 
-            if (regexp_username.test(username)) {
+            if (regexp_username.test(username_value)) {
                 console.log("Nem megfelelő a felhasználónév formátuma!");
             }
         });
