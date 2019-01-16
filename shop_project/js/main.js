@@ -36,7 +36,7 @@ $(document).ready(function () {
         });
 
         // Jelszó megerősítés valid
-        $('#pwdc').keyup(function () {
+        $('#pwdc').blur(function () {
             
             var pwd = $('#pwd');
             var input_password = $(this);
