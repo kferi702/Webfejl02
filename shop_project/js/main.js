@@ -13,7 +13,7 @@ $(document).ready(function () {
 
             var regexp_username = /[^A-Za-z0-9]+/g;
 
-            if (regexp_username.test(input_username)) {
+            if (regexp_username.test(username)) {
                 console.log("Nem megfelelő a felhasználónév formátuma!");
             }
 
