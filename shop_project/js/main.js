@@ -16,7 +16,7 @@ $(document).ready(function () {
             var regexp_username = /[^A-Za-z0-9]+/g;
             
             if (regexp_username.test(value_input_username)) {
-                console.log("Nem megfelelő a felhasználónév formátuma!");
+                alert("Nem megfelelő a felhasználónév formátuma!");
             }
             
         });
@@ -34,9 +34,11 @@ $(document).ready(function () {
 
         // Jelszó megerősítés valid
         $('#pwdc').keyup(function () {
+            
+            var pwd = $('#pwd');
             var input_password = $(this);
 
-            if (input_password != $('#pwd')) {
+            if (input_password != pwd) {
                 alert('A két jelszó nem egyezik!');
             }
         });
