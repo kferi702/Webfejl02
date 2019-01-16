@@ -4,18 +4,25 @@ $(document).ready(function () {
 
     $('#reg').click(function () {
 
-        //Felhasználónév
-        $('#fullname').keyup(function () {
+        //Felhasználónév validáció
+        
+        $('#username').keyup(function () {
+            
             var input_username = $(this);
             var value_input_username = $(input_username).val();
+            
             input_username.attr('minlength', '6');
+            
             var regexp_username = /[^A-Za-z0-9]+/g;
+            
             if (regexp_username.test(value_input_username)) {
-                alert("Nem megfelelő a felhasználónév formátuma!");
+                console.log("Nem megfelelő a felhasználónév formátuma!");
             }
+            
         });
-
-        //Jelszó valid	
+        
+        //Jelszó valid
+        
         $('#pwd').keyup(function () {
             var input_password = $(this);
             var value_input_password = $(input_password).val();
@@ -25,12 +32,12 @@ $(document).ready(function () {
             }
         });
 
+        // Jelszó megerősítés valid
         $('#pwdc').keyup(function () {
             var input_password = $(this);
-            var value_input_password = $(input_password).val();
-            var regexp_password = /[^A-Za-z0-9]+/g;
-            if (regexp_password.test(value_input_password)) {
-                alert("Nem megfelelő a jelszó formátuma!");
+
+            if (input_password != $('#pwd')) {
+                alert('A két jelszó nem egyezik!');
             }
         });
 
