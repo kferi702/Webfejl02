@@ -23,10 +23,10 @@ $(document).ready(function () {
         //Jelszó valid        
         $('#pwd').blur(function () {
             
-            var value_input_password = $(this).val();
+            var input_password = $(this).val();
             
             var regexp_password = /[^A-Za-z0-9]+/g;
-            if (regexp_password.test(value_input_password)) {
+            if (regexp_password.test(input_password)) {
                 alert("Nem megfelelő a jelszó formátuma!");
             }
             
@@ -39,7 +39,7 @@ $(document).ready(function () {
             var input_password = $(this);
 
             if (input_password != pwd) {
-                alert('A két jelszó nem egyezik!');
+                console.log('A két jelszó nem egyezik!');
             }
         });
 
