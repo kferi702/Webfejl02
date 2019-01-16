@@ -5,8 +5,8 @@ body {
 nav{
     padding: 16px;
     background-color: #2e2eb8;
-    
-    
+
+
 }
 nav li{
     display: inline;
@@ -16,7 +16,7 @@ nav ul{
     padding: 0;
 }
 nav form {
-    
+
     float: right;
 }
 nav a{
@@ -29,7 +29,7 @@ nav a:hover{
     font-weight: bold;
 }
 #products {
-    
+
     width: 800px;
     margin: 2em auto 0 auto;
 }
