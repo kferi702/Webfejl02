@@ -1,14 +1,14 @@
 <?php
-
-function dd($var){
+function dd($var) {
     var_dump($var);
     die();
 }
-function readPost($kulcs){
+
+function readPost($kulcs) {
     $temp = trim($_POST[$kulcs]);
-    if (!empty($temp)){
-     return $temp;
- } else {
-    $_SESSION['regErr'][$kulcs] = 'Kitöltetlen mező!';
- }
+    if (!empty($temp)) {
+        return $temp;
+    } else {
+        $_SESSION['regErr'][$kulcs] = 'Kitöltetlen mező!';
+    }
 }
