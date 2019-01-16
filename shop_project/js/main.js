@@ -7,11 +7,11 @@ $(document).ready(function () {
         //Felhasználónév validáció        
         $('#username').blur(function () {
 
-            var username = $(this).val();
+            let username = $(this);
 
             username.attr('minlength', '6');
 
-            var regexp_username = /[^A-Za-z0-9]+/g;
+            let regexp_username = /[^A-Za-z0-9]+/g;
 
             if (regexp_username.test(username)) {
                 console.log("Nem megfelelő a felhasználónév formátuma!");
@@ -21,10 +21,10 @@ $(document).ready(function () {
         //Jelszó valid        
         $('#pwd').blur(function () {
 
-            var password = $(this).val();
+            let password = $(this);
 
-            var regexp_password = /[^A-Za-z0-9]+/g;
-            
+            let regexp_password = /[^A-Za-z0-9]+/g;
+
             if (regexp_password.test(password)) {
                 console.log("Nem megfelelő a jelszó formátuma!");
             }
@@ -33,8 +33,8 @@ $(document).ready(function () {
         // Jelszó megerősítés valid
         $('#pwdc').blur(function () {
 
-            var pwd = $('#pwd');
-            var input_password = $(this);
+            let pwd = $('#pwd').val();
+            let input_password = $(this);
 
             if (input_password != pwd) {
                 console.log('A két jelszó nem egyezik!');
@@ -49,7 +49,7 @@ $(document).ready(function () {
         });
 
         $('#zip_code').blur(function () {
-            var selected_zip_code = $('#zip_code :selected').val();
+            let selected_zip_code = $('#zip_code :selected').val();
             if (selected_year < 9999 || selected_year > 1000) {
                 alert("Nincs kiválasztva irányítószám!");
             }
