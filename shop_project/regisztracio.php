@@ -26,21 +26,21 @@ $menu = file_get_contents("html/nav_out.html");
                 ?>
             </nav>
             <form id="regForm" method="post" action="reg.php">
-                <input id="username" type="text" name="username" placeholder="Felhasználónév" required/>
+                <input id="username" type="text" name="username" placeholder="Felhasználónév"/>
                 <br>
-                <input id="fullname" type="text" name="fullname" placeholder="Név" required />
+                <input id="fullname" type="text" name="fullname" placeholder="Név" />
                 <br>
-                <input id="pwd" type="password" name="pwd" placeholder="Jelszó" required />
+                <input id="pwd" type="password" name="pwd" placeholder="Jelszó" />
                 <br>
-                <input id="pwdc" type="password" name="pwdc" placeholder="Jelszó megerősítése" required />
+                <input id="pwdc" type="password" name="pwdc" placeholder="Jelszó megerősítése" />
                 <br>
-                <input id="email" type="email" name="email" placeholder="valaki@vasvari.hu" required />
+                <input id="email" type="email" name="email" placeholder="valaki@vasvari.hu" />
                 <br>
-                <input id="zip" type="number" name="irsz" placeholder="Irányítószám" required />
+                <input id="zip" type="number" name="irsz" placeholder="Irányítószám" />
                 <br>
-                <input id="tel" type="tel" name="tel" placeholder="Telefonszám" required/>
+                <input id="tel" type="tel" name="tel" placeholder="Telefonszám" />
                 <br>
-                <input id="reg" type="submit" value="Regisztráció" name="regisztracio">
+                <input id="reg" type="submit" value="Regisztráció" name="regisztracio" />
             </form>
         </div>
         <?php
