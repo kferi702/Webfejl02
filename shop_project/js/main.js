@@ -9,13 +9,11 @@ $(document).ready(function () {
             
             let username = $(this);
 
-            let username_value = username.val();
-
             username.attr('minlength', '6');
 
             let regexp_username = /[^A-Za-z0-9]+/g;
 
-            if (regexp_username.test(username_value)) {
+            if (regexp_username.test(username)) {
                 console.log("Nem megfelelő a felhasználónév formátuma!");
             }
         });
@@ -53,7 +51,7 @@ $(document).ready(function () {
         $('#zip_code').blur(function () {
             let selected_zip_code = $('#zip_code :selected').val();
             if (selected_year < 9999 || selected_year > 1000) {
-                alert("Nincs kiválasztva irányítószám!");
+                console.log("Nincs kiválasztva irányítószám!");
             }
         });
 
@@ -76,7 +74,7 @@ $(document).ready(function () {
             var regexp_email = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
             if (!regexp_email.test(input_email)) {
-                alert("Nem megfelelő az e-mail formátuma!");
+                console.log("Nem megfelelő az e-mail formátuma!");
             }
         });
     });
