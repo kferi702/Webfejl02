@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    console.log('jQuery működik');
+    console.log('jQuery működik !!!');
 
     $('#reg').click(function () {
 
@@ -19,7 +19,15 @@ $(document).ready(function () {
         $('#pwd').keyup(function () {
             var input_password = $(this);
             var value_input_password = $(input_password).val();
-            input_password.attr('minlength', '8');
+            var regexp_password = /[^A-Za-z0-9]+/g;
+            if (regexp_password.test(value_input_password)) {
+                alert("Nem megfelelő a jelszó formátuma!");
+            }
+        });
+
+        $('#pwdc').keyup(function () {
+            var input_password = $(this);
+            var value_input_password = $(input_password).val();
             var regexp_password = /[^A-Za-z0-9]+/g;
             if (regexp_password.test(value_input_password)) {
                 alert("Nem megfelelő a jelszó formátuma!");
