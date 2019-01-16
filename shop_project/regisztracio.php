@@ -30,17 +30,17 @@ $menu = file_get_contents("html/nav_out.html");
                 }
                 ?>
                 <br>
-                <input id="fullname" type="text" name="fullname" placeholder="Név" required>
+                <input id="fullname" type="text" name="fullname" placeholder="Név" required />
                 <br>
-                <input id="pwd" type="password" name="pwd" placeholder="Jelszó">
+                <input id="pwd" type="password" name="pwd" placeholder="Jelszó" required />
                 <br>
-                <input id="pwdc" type="password" name="pwdc" placeholder="Jelszó megerősítése">
+                <input id="pwdc" type="password" name="pwdc" placeholder="Jelszó megerősítése" required />
                 <br>
-                <input id="email" type="email" name="email" placeholder="valaki@vasvari.hu">
+                <input id="email" type="email" name="email" placeholder="valaki@vasvari.hu" required />
                 <br>
-                <input id="zip" type="number" name="irsz" placeholder="Irányítószám">
+                <input id="zip" type="number" name="irsz" placeholder="Irányítószám" required />
                 <br>
-                <input id="tel" type="tel" name="tel" placeholder="Telefonszám">
+                <input id="tel" type="tel" name="tel" placeholder="Telefonszám" required/>
                 <br>
                 <input id="reg" type="submit" value="Regisztráció" name="regisztracio">
             </form>
