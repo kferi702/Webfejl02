@@ -10,9 +10,19 @@ function readPost($kulcs) {
 
     if (!empty($temp)) {
         return $temp;
-        echo "Nem üres";
-        die();
+        // echo "Nem üres";
+        // die();
     } else {
         $_SESSION['regErr'][$kulcs] = 'Kitöltetlen mező!';
     }
+}
+
+function setRegError($kulcs, $msg) {
+
+    if (isset($_SESSION['regErr'][$kulcs])) {
+        $_SESSION['regErr'][$kulcs] .= $msg;
+    } else {
+        $_SESSION['regErr'][$kulcs] .= $msg;
+    }
+    return true;
 }
