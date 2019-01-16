@@ -6,35 +6,34 @@ $(document).ready(function () {
 
         //Felhasználónév validáció        
         $('#username').blur(function () {
-            
-            var input_username = $(this).val();
-            var value_input_username = $(input_username).val();
-            
-            input_username.attr('minlength', '6');
-            
+
+            var username = $(this).val();
+
+            username.attr('minlength', '6');
+
             var regexp_username = /[^A-Za-z0-9]+/g;
-            
-            if (regexp_username.test(value_input_username)) {
+
+            if (regexp_username.test(input_username)) {
                 console.log("Nem megfelelő a felhasználónév formátuma!");
             }
-            
+
         });
-        
+
         //Jelszó valid        
         $('#pwd').blur(function () {
-            
+
             var input_password = $(this).val();
-            
+
             var regexp_password = /[^A-Za-z0-9]+/g;
             if (regexp_password.test(input_password)) {
                 console.log("Nem megfelelő a jelszó formátuma!");
             }
-            
+
         });
 
         // Jelszó megerősítés valid
         $('#pwdc').blur(function () {
-            
+
             var pwd = $('#pwd');
             var input_password = $(this);
 
