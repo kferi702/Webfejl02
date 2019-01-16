@@ -9,8 +9,6 @@ $(document).ready(function () {
             
             let username = $(this);
 
-            username.attr('minlength', '6');
-
             let regexp_username = /[^A-Za-z0-9]+/g;
 
             if (regexp_username.test(username)) {
