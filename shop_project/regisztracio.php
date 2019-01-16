@@ -27,11 +27,6 @@ $menu = file_get_contents("html/nav_out.html");
             </nav>
             <form id="regForm" method="post" action="reg.php">
                 <input type="text" name="username" placeholder="Felhasználónév" required/>
-                <?php
-                if (isset($_SESSION['regErr'])) {
-                    echo "<span>" . $_SESSION['regErr']['username'] . "</span>";
-                }
-                ?>
                 <br>
                 <input id="fullname" type="text" name="fullname" placeholder="Név" required />
                 <br>
