@@ -4,8 +4,7 @@ $(document).ready(function () {
 
     $('#reg').click(function () {
 
-        //Felhasználónév validáció
-        
+        //Felhasználónév validáció        
         $('#username').blur(function () {
             
             var input_username = $(this);
@@ -21,8 +20,7 @@ $(document).ready(function () {
             
         });
         
-        //Jelszó valid
-        
+        //Jelszó valid        
         $('#pwd').blur(function () {
             
             var input_password = $(this);
