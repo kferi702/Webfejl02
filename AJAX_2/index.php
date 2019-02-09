@@ -12,6 +12,6 @@
     </head>
     <body>
         <h1>AJAX</h1>
-        <select id="versenyzo"></select>
+        <div id="container">
     </body>
 </html>
