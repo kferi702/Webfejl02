@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2019. Feb 09. 12:59
+-- Létrehozás ideje: 2019. Feb 09. 13:42
 -- Kiszolgáló verziója: 10.1.30-MariaDB
 -- PHP verzió: 7.2.1
 
@@ -74,7 +74,8 @@ CREATE TABLE IF NOT EXISTS `jegyzokonyv` (
   `ki` time NOT NULL,
   `bkis` int(11) NOT NULL,
   `bjo` int(11) NOT NULL,
-  PRIMARY KEY (`az`)
+  PRIMARY KEY (`az`),
+  KEY `mezid` (`mez`)
 ) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8;
 
 --
@@ -180,6 +181,16 @@ INSERT INTO `jegyzokonyv` (`az`, `mez`, `be`, `ki`, `bkis`, `bjo`) VALUES
 (96, 50, '00:25:02', '00:28:48', 2, 1),
 (97, 50, '00:30:00', '00:32:41', 2, 0),
 (98, 50, '00:35:45', '00:40:00', 3, 0);
+
+--
+-- Megkötések a kiírt táblákhoz
+--
+
+--
+-- Megkötések a táblához `jegyzokonyv`
+--
+ALTER TABLE `jegyzokonyv`
+  ADD CONSTRAINT `mezid` FOREIGN KEY (`mez`) REFERENCES `jatekos` (`mez`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
