@@ -1,7 +1,7 @@
 $(document).ready(function () {
     getPlayers();
 
-    $(document).on("click", "#player", function () {
+    $(document).on("click", "lista", function () {
 
         let nev = $('#player').text();
 

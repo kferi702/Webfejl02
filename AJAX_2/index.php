@@ -13,5 +13,6 @@
     <body>
         <h4>Válassz ki egy játékost!</h4>
         <select id="players"></select>
+        <button id='lista'>Listázás</button>
     </body>
 </html>
