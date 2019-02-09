@@ -2,7 +2,7 @@
 
 require_once('../config/connect.php');
 
-$sql = 'SELECT * FROM user;';
+$sql = 'SELECT * FROM jatekos;';
 $result = $connection->query($sql);
 
 if (!$result) {
@@ -11,18 +11,19 @@ if (!$result) {
 
 $html = "<table>"
         . "<tr>"
-        . "<th>Sorszám</th>"
-        . "<th>Vezetéknév</th>"
-        . "<th>Keresztnév</th>"
-        . "<th>Művelet</th>"
+        . "<th>Mez</th>"
+        . "<th>Név</th>"
+        . "<th>Magasság</th>"
+        . "<th>Poszt/<th>"
         . "</tr>";
 
 while ($row = $result->fetch_assoc()) {
     $html .= "<tr>"
-            . "<td>{$row['ID']}</td>"
-            . "<td>{$row['vezeteknev']}</td>"
-            . "<td>{$row['keresztnev']}</td>"
-            . "<td><button class='torol' id='{$row['ID']}'> &#128465; </button></td>"
+            . "<td>{$row['mez']}</td>"
+            . "<td>{$row['nev']}</td>"
+            . "<td>{$row['magassag']}</td>"
+            . "<td>{$row['post']}</td>"
+            . "<td><button class='torol' mez='{$row['mez']}'> &#128465; </button></td>"
             . "</tr>";
 }
 echo $html;

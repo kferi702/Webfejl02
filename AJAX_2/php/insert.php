@@ -7,7 +7,7 @@ if (isset($_POST['knev']) && !empty($_POST['knev'])) {
     $knev = $_POST['knev'];
 }
 
-$sql = "INSERT INTO user(vezeteknev, keresztnev) VALUES ('$vnev', '$knev');";
+$sql = "INSERT INTO jatekos(mez, nev, magassag, post) VALUES ('$vnev', '$knev');";
 $result = $connection->query($sql);
 
 if (!$result) {
