@@ -32,7 +32,7 @@ $html = "<tr>"
         . "<td id='knev' contenteditable></td>"
         . "<td><button class='ment'> + </button></td>"
         . "</tr>";
-$html .= '</table>';
+$html .= "</table>";
 echo $html;
 
 $connection->close();
