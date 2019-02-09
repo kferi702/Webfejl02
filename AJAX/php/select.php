@@ -9,13 +9,13 @@ if (!$result) {
     die('Hiba a lekérdezés során!');
 }
 
-$html = '<table>'
-        . '<tr>'
-        . '<th>Sorszám</th>'
-        . '<th>Vezetéknév</th>'
-        . '<th>Keresztnév</th>'
-        . '<th>Művelet</th>'
-        . '</tr>';
+$html = "<table>"
+        . "<tr>"
+        . "<th>Sorszám</th>"
+        . "<th>Vezetéknév</th>"
+        . "<th>Keresztnév</th>"
+        . "<th>Művelet</th>"
+        . "</tr>";
 
 while ($row = $result->fetch_assoc()) {
     $html .= "<tr>"
