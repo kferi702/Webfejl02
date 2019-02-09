@@ -25,6 +25,9 @@ $(document).ready(function () {
                 },
                 success: function (valasz) {
                     olvas();
+                },
+                error: function (xhr) {
+                    alert(xhr.status);
                 }
             });
         }
