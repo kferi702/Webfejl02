@@ -12,8 +12,6 @@
     </head>
     <body>
         <h1>AJAX</h1>
-        <div id="container">
-
-        </div>
+        <div id="container"></div>
     </body>
 </html>
