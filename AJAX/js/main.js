@@ -1,5 +1,8 @@
 $(document).ready(function () {
     olvas();
+    $(document).on("click", ".torol", function () {
+
+    });
 });
 
 function olvas() {
