@@ -17,8 +17,6 @@ $html = '<table>'
         . '<th>Művelet</th>'
         . '</tr>';
 
-$html .= '</table>';
-
 while ($row = $result->fetch_assoc()) {
     $html .= "<tr>"
             . "<td>{$row['ID']}</td>"
@@ -26,6 +24,8 @@ while ($row = $result->fetch_assoc()) {
             . "<td>{$row['keresztnev']}</td>"
             . "</tr>";
 }
+$html .= '</table>';
+
 echo $html;
 
 $connection->close();
