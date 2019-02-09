@@ -22,7 +22,7 @@ while ($row = $result->fetch_assoc()) {
             . "<td>{$row['ID']}</td>"
             . "<td>{$row['vezeteknev']}</td>"
             . "<td>{$row['keresztnev']}</td>"
-            . "<td><button class='torol' id='{$row['ID']}'> &#12846; </button></td>"
+            . "<td><button class='torol' id='{$row['ID']}'> &#128465; </button></td>"
             . "</tr>";
 }
 echo $html;
