@@ -20,8 +20,8 @@ $(document).ready(function () {
                 method: "post",
                 dataType: "TEXT",
                 data: {
-                    vnev: vnev,
-                    knev: knev
+                    "vnev": vnev,
+                    "knev": knev
                 },
                 success: function (valasz) {
                     olvas();
