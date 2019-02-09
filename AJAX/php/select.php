@@ -35,4 +35,6 @@ $html = "<tr>"
         . "</tr>";
 $html .= "</table>";
 
+echo $html;
+
 $connection->close();
