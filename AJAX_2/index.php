@@ -11,7 +11,7 @@
         <title>AJAX</title>
     </head>
     <body>
-        <h1>AJAX</h1>
+        <h4>Válassz ki egy játékost!</h4>
         <select id="players"></select>
     </body>
 </html>
