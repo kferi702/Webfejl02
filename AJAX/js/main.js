@@ -1,8 +1,8 @@
 $(document).ready(function () {
     olvas();
     $(document).on("click", ".torol", function () {
-        let id = $(this).attr("ID");
-        $.post("php/del.php",
+        let id = $(this).attr("id");
+        $.post("php/delete.php",
                 {
                     del: id
                 },
