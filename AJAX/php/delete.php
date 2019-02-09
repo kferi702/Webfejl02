@@ -13,4 +13,4 @@ if (isset($_POST['del'])) {
     }
 }
 
-$connection-close();
+$connection->close();
