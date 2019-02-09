@@ -25,7 +25,6 @@ while ($row = $result->fetch_assoc()) {
             . "<td><button class='torol' id='{$row['ID']}'> &#12846; </button></td>"
             . "</tr>";
 }
-
 echo $html;
 
 $html = "<tr>"
