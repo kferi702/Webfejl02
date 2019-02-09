@@ -10,10 +10,12 @@ if (!$result) {
 }
 
 $html = '<table>'
-        . '<tr>Sorszám<th></th>'
+        . '<tr>'
+        . '<th>Sorszám</th>'
         . '<th>Vezetéknév</th>'
         . '<th>Keresztnév</th>'
-        . '<th>Művelet</th></tr>';
+        . '<th>Művelet</th>'
+        . '</tr>';
 
 $html .= '</table>';
 
