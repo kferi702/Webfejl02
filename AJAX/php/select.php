@@ -2,7 +2,7 @@
 
 require_once('../config/connect.php');
 
-$sql = 'SELECT * FROM user';
+$sql = 'SELECT * FROM user;';
 $result = $connection->query($sql);
 
 if (!$result) {
@@ -22,10 +22,17 @@ while ($row = $result->fetch_assoc()) {
             . "<td>{$row['ID']}</td>"
             . "<td>{$row['vezeteknev']}</td>"
             . "<td>{$row['keresztnev']}</td>"
+            . "<td><button class='torol' id='{$row['ID']}'> &#12846; </button></td>"
             . "</tr>";
 }
-$html .= '</table>';
 
+$html = "<tr>"
+        . "<td></td>"
+        . "<td id='vnev' contenteditable></td>"
+        . "<td id='knev' contenteditable></td>"
+        . "<td><button class='ment'> + </button></td>"
+        . "</tr>";
+$html .= '</table>';
 echo $html;
 
 $connection->close();
