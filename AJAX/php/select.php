@@ -26,6 +26,8 @@ while ($row = $result->fetch_assoc()) {
             . "</tr>";
 }
 
+echo $html;
+
 $html = "<tr>"
         . "<td></td>"
         . "<td id='vnev' contenteditable></td>"
@@ -33,6 +35,5 @@ $html = "<tr>"
         . "<td><button class='ment'> + </button></td>"
         . "</tr>";
 $html .= "</table>";
-echo $html;
 
 $connection->close();
