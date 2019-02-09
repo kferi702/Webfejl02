@@ -10,7 +10,7 @@ if (!$result) {
 }
 
 while ($row = $result->fetch_assoc()) {
-    $players = "<option>{$row['nev']}</option>";
+    $players = "<option id='player'>{$row['nev']}</option>";
     echo $players;
 }
 
