@@ -34,7 +34,6 @@ $html = "<tr>"
         . "<td><button class='ment'> + </button></td>"
         . "</tr>";
 $html .= "</table>";
-
 echo $html;
 
 $connection->close();

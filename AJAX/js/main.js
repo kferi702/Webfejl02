@@ -18,7 +18,7 @@ $(document).ready(function () {
             $.ajax({
                 url: "php/insert.php",
                 method: "post",
-                dataType: "JSON",
+                dataType: "TEXT",
                 data: {
                     vnev: vnev,
                     knev: knev

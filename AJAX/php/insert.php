@@ -3,11 +3,11 @@
 require_once('../config/connect.php');
 
 if (isset($_POST['knev']) && !empty($_POST['knev'])) {
-    $vnev = $_POST['veznev'];
+    $vnev = $_POST['vnev'];
     $knev = $_POST['knev'];
 }
 
-$sql = "INSERT INTO user(vezeteknev, keresztnev) VALUES (vezeteknev, keresztnev);";
+$sql = "INSERT INTO user(vezeteknev, keresztnev) VALUES ('$vnev', '$knev');";
 $result = $connection->query($sql);
 
 if (!$result) {
