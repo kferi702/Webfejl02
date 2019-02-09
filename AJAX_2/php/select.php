@@ -28,13 +28,4 @@ while ($row = $result->fetch_assoc()) {
 }
 echo $html;
 
-$html = "<tr>"
-        . "<td></td>"
-        . "<td id='vnev' contenteditable></td>"
-        . "<td id='knev' contenteditable></td>"
-        . "<td><button class='ment'> + </button></td>"
-        . "</tr>";
-$html .= "</table>";
-echo $html;
-
 $connection->close();
