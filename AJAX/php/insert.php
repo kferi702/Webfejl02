@@ -2,7 +2,7 @@
 
 require_once('../config/connect.php');
 
-if (isset($_POST['knev'])) {
+if (isset($_POST['knev']) && empty($_POST['knev'])) {
     $vnev = $_POST['veznev'];
     $knev = $_POST['knev'];
 }
