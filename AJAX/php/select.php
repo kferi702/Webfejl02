@@ -21,9 +21,9 @@ $html .= '</table>';
 
 while ($row = $result->fetch_assoc()) {
     $html .= "<tr>"
-            . "<td>{$row["ID"]}</td>"
-            . "<td>{$row["vezeteknev"]}</td>"
-            . "<td>{$row["keresztnev"]}</td>"
+            . "<td>{$row['ID']}</td>"
+            . "<td>{$row['vezeteknev']}</td>"
+            . "<td>{$row['keresztnev']}</td>"
             . "</tr>";
 }
 echo $html;
