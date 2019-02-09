@@ -1,11 +1,9 @@
 $(document).ready(function () {
-    
-    olvas();
-    
-    function olvas() {
-        $.get("php/select.php", function (valasz, status) {
-            console.log(status);
-            $('#container').html(valasz);
-        });
-    }
+    getPlayers();
 });
+function getPlayers() {
+    $.get("php/select.php", function (valasz, status) {
+        console.log(status);
+        $('#players').html(valasz);
+    });
+}
