@@ -8,7 +8,7 @@ $(document).ready(function () {
                     mez: mez
                 },
                 function (valasz) {
-                    $('#jatekosAdatai').html(valasz);
+                    $('#jatekosokAdatai').html(valasz);
                 });
     });
 });
