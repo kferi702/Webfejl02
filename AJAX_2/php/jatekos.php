@@ -9,7 +9,8 @@ if (!$result) {
     die('Hiba a lekérdezés során!');
 }
 
-$html = "<select id='jatekos'>";
+$html = "<select id='jatekos'>"
+        . "<option value='null'> Válassz! </option>";
 
 while ($row = $result->fetch_assoc()) {
     $html .= "<option value='{$row['mez']}'>{$row['nev']}</option>";
