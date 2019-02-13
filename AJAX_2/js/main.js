@@ -11,6 +11,10 @@ $(document).ready(function () {
                     $('#jatekosAdatai').html(valasz);
                 });
     });
+
+    $(document).on("change", "#jatekos", function () {
+
+    });
 });
 function jatekosokatOlvas() {
     $.get("php/jatekos.php", function (valasz, status) {
