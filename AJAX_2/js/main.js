@@ -10,7 +10,7 @@ $(document).ready(function () {
         },
         function (valasz) {
             $('#jatekosAdatai').html(valasz);
-        })
+        });
     });
 });
 function jatekosokatOlvas() {
