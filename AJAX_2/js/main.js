@@ -6,3 +6,9 @@ function jatekosokatOlvas() {
         $("#jatekosok").html(valasz);
     });
 }
+
+function adatokatOlvas() {
+    $.get("php/jegyzo.php", function (valasz, status) {
+        $('#jatekosokAdatai').html(valasz)
+    });
+}
