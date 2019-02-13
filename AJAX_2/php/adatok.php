@@ -13,20 +13,15 @@ if (!$result) {
     die('Hiba a lekérdezés során!');
 }
 
-$html = "<table style='border: 1px solid black' id='adatok'>"
-        . "<th>Mezszám</th>"
-        . "<th>Magasság</th>"
-        . "<th>Poszt</th>";
+if ($result->num_rows == 1) {
+    $html = "<ul>";
+    $row = $result->fetch_row(); // fetch_row(): Számozott tömb, nem asszociatív, fetch_assoc(): asszociatív tömböt hoz létre
+    $html .= "<li> {$row[0]}</li>"
+            . "<li> {$row[1]}</li>"
+            . "<li> {$row[2]}</li>"
+            . "</ul>";
 
-while ($row = $result->fetch_assoc()) {
-    $html .= "<tr style='border: 1px solid black'>"
-            . "<td>{$row['mez']}</th>"
-            . "<td>{$row['magassag']}</th>"
-            . "<td>{$row['post']}</th>"
-            . "</tr>";
+    echo $html;
 }
-
-$html .= "</table>";
-echo $html;
 
 $connection->close();
