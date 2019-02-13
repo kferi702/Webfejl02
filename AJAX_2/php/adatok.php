@@ -25,7 +25,6 @@ if ($result->num_rows == 1) {
             . "<li> {$row[2]}</li>"
             . "<li> {$row[3]}</li>"
             . "</ul>";
-
     echo $html;
 }
 
