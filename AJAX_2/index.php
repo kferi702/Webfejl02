@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-4">
                     <section id="jatekosok"></section>
-                    <section id="jatekosokAdatai"></section>
+                    <section id="jatekosAdatai"></section>
                 </div>
                 <div class="col-8">
                     <section id="jegyzokonyv"></section>
