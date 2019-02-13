@@ -18,7 +18,7 @@ if ($result->num_rows == 1) {
 
     /*
      * fetch_row() => Számozott tömb
-     * fetch_assoc() => asszociatív tömböt hoz létre
+     * fetch_assoc() => Asszociatív tömb
      */
     $row = $result->fetch_row();
     $html .= "<li> {$row[0]}</li>"
