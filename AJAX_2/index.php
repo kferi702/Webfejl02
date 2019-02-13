@@ -11,8 +11,10 @@
         <title>AJAX</title>
     </head>
     <body>
-        <h4>Válassz ki egy játékost!</h4>
-        <select id="players"></select>
-        <button id="lista">Listázás</button>
+        <div class="container">
+            <h4>Kosárlabda jegyzőkönyv</h4>
+            <select id="players"></select>
+            <button id="lista">Listázás</button>
+        </div>
     </body>
 </html>
