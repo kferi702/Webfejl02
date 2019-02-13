@@ -12,7 +12,14 @@ $(document).ready(function () {
     });
 
     $(document).on("change", "#jatekos", function () {
-
+        let mez = $(this).val();
+        $.post("php/jegyzokonyv.php",
+                {
+                    mez: mez
+                },
+                function (valasz) {
+                    $('#jegyzokonyv').html(valasz);
+                });
     });
 });
 function jatekosokatOlvas() {
