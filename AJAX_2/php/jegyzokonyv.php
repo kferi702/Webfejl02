@@ -12,7 +12,7 @@ if (isset($_POST['mez'])) {
         die('Hiba a lekérdezés során!');
     }
 
-    $html = "<table class='table table-stripe'>"
+    $html = "<table class='table table-striped'>"
             . "<tr>"
             . "<th>Be</th>"
             . "<th>Ki</th>"
