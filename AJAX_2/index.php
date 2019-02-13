@@ -15,9 +15,21 @@
         <div class="container-fluid">
             <h1>Kosárlabda mérkőzés jegyzőkönyv</h1>
             <div class="row">
-                <div class="col-4">Bal</div>
-                <div class="col-8">Jobb</div>
+                <div class="col-4">
+                    <section id="jatekosok">
+
+                    </section>
+                    <section id="jatekosokAdatai">
+
+                    </section>
+                </div>
+                <div class="col-8">
+                    <section id="jegyzokonyv">
+
+                    </section>
+                </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
