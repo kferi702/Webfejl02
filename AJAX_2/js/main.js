@@ -2,15 +2,15 @@ $(document).ready(function () {
     jatekosokatOlvas();
     $(document).on("change", "#jatekos", function () {
 
-        let id = $(this).val();
-        console.log(id);
+        let mez = $(this).val();
+        console.log(mez);
         $.post("php/adatok.php",
-        {
-            id: id
-        },
-        function (valasz) {
-            $('#jatekosAdatai').html(valasz);
-        });
+                {
+                    id: mez
+                },
+                function (valasz) {
+                    $('#jatekosAdatai').html(valasz);
+                });
     });
 });
 function jatekosokatOlvas() {
