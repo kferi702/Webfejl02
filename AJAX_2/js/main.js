@@ -2,7 +2,7 @@ $(document).ready(function () {
     jatekosokatOlvas();
 });
 function jatekosokatOlvas() {
-    $.get("php/jatekosok.php", function (valasz, status) {
+    $.get("php/jatekos.php", function (valasz, status) {
         $("#jatekosok").html(valasz);
     });
 }

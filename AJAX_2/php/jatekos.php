@@ -18,3 +18,5 @@ while ($row->fetch_assoc()) {
 
 $html .= '</select>';
 echo $html;
+
+$connection->close();
