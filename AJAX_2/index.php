@@ -2,6 +2,7 @@
 <html lang="hu">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -11,17 +12,11 @@
         <title>AJAX</title>
     </head>
     <body>
-        <h4>Kosárlabda jegyzőkönyv</h4>
         <div class="container-fluid">
-            <div>
-                <select id="players"></select>
-                <button id="lista">Listázás</button>
-            </div>
-            <div>
-                <h5>Játékos adatai</h5>
-            </div>
-            <div>
-                <h5>Jegyzőkönyv</h5>
+            <h1>Kosárlabda jegyzőkönyv</h1>
+            <div class="row">
+                <div class="col-4">Bal</div>
+                <div class="col-8">Jobb</div>
             </div>
         </div>
     </body>
