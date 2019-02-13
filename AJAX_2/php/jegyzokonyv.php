@@ -12,13 +12,12 @@ if (isset($_POST['mez'])) {
         die('Hiba a lekérdezés során!');
     }
 
-    if ($result->num_rows == 1) {
+    while ($row = $result->fetch_assoc()) {
         $html = "<ul>";
-        $row = $result->fetch_row();
-        $html .= "<li>{$row[1]}</li>"
-                . "<li>{$row[2]}</li>"
-                . "<li>{$row[3]}</li>"
-                . "<li>{$row[4]}</li>"
+        $html .= "<li>{$row['be']}</li>"
+                . "<li>{$row['ki']}</li>"
+                . "<li>{$row['bkis']}</li>"
+                . "<li>{$row['bjo']}</li>"
                 . "</ul>";
         echo $html;
     }
