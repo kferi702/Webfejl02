@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container-fluid">
-            <h1>Kosárlabda jegyzőkönyv</h1>
+            <h1>Kosárlabda mérkőzés jegyzőkönyv</h1>
             <div class="row">
                 <div class="col-4">Bal</div>
                 <div class="col-8">Jobb</div>
