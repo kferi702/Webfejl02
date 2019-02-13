@@ -3,7 +3,7 @@
 $connection = new mysqli('localhost', 'root', '', 'kosarlabda', '3306');
 
 if ($connection->connect_errno) {
-    die('Nem sikerült csatlakozni!');
+    die('Hiba a csatalkozás során:\n' . $connection_error);
 }
 
 if (!$connection->set_charset("utf8")) {

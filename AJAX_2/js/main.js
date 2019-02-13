@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     getPlayers();
 
     $(document).on("click", "lista", function () {
@@ -23,6 +24,7 @@ $(document).ready(function () {
         }
     });
 });
+
 function getPlayers() {
     $.get("php/select.php", function (valasz, status) {
         console.log(status);

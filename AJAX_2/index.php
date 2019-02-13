@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
