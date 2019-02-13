@@ -16,7 +16,7 @@ while ($row->fetch_assoc()) {
     $html .= "<option value='{$row['mez']}'></option>";
 }
 
-$html .= '</select>';
+$html .= "</select>";
 echo $html;
 
 $connection->close();
