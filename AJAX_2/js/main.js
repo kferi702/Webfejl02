@@ -1,5 +1,7 @@
 $(document).ready(function () {
+    
     jatekosokatOlvas();
+    
     $(document).on("change", "#jatekos", function () {
         let mez = $(this).val();
         $.post("php/adatok.php",
@@ -21,6 +23,7 @@ $(document).ready(function () {
                     $('#jegyzokonyv').html(valasz);
                 });
     });
+    
 });
 function jatekosokatOlvas() {
     $.get("php/jatekos.php", function (valasz, status) {
