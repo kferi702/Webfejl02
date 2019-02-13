@@ -20,9 +20,9 @@ if (isset($_POST['mez'])) {
          * fetch_assoc() => Asszociatív tömb
          */
         $row = $result->fetch_row();
-        $html .= "<li> {$row[0]}</li>"
-                . "<li> {$row[2]}</li>"
-                . "<li> {$row[3]}</li>"
+        $html .= "<li>Mezszám: {$row[0]}</li>"
+                . "<li>Magasság: {$row[2]}</li>"
+                . "<li>Poszt: {$row[3]}</li>"
                 . "</ul>";
         echo $html;
     }
