@@ -1,7 +1,6 @@
 $(document).ready(function () {
     jatekosokatOlvas();
     $(document).on("change", "#jatekos", function () {
-
         let mez = $(this).val();
         $.post("php/adatok.php",
                 {
