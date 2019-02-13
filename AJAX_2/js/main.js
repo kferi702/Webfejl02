@@ -1,8 +1,7 @@
 $(document).ready(function () {
-
-
+    jatekosokatOlvas();
 });
-function olvas() {
+function jatekosokatOlvas() {
     $.get("php/jatekosok.php", function (valasz, status) {
         $("#jatekosok").html(valasz);
     });
