@@ -1,6 +1,9 @@
 $(document).ready(function () {
     jatekosokatOlvas();
-    adatokatOlvas();
+
+    $(document).on("", "#jatekoAdatai", function () {
+        adatokatOlvas();
+    });
 });
 function jatekosokatOlvas() {
     $.get("php/jatekos.php", function (valasz, status) {
