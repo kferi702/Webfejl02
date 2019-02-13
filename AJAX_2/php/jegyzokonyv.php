@@ -5,7 +5,7 @@ require_once('../config/connect.php');
 if (isset($_POST['mez'])) {
     $mez = $_POST['mez'];
 
-    $sql = "SELECT * FROM jegyzokonyv WHERE mez = '$mez';";
+    $sql = "SELECT be, ki, bkis, bjo FROM jegyzokonyv WHERE mez = '$mez';";
     $result = $connection->query($sql);
 
     if (!$result) {
@@ -20,10 +20,10 @@ if (isset($_POST['mez'])) {
             . "<th>Kosár</th></tr>";
 
     while ($row = $result->fetch_row()) {
-        $html .= "<td>{$row[2]}</td>"
+        $html .= "<td>{$row[0]}</td>"
+                . "<td>{$row[1]}</td>"
+                . "<td>{$row[2]}</td>"
                 . "<td>{$row[3]}</td>"
-                . "<td>{$row[4]}</td>"
-                . "<td>{$row[5]}</td>"
                 . "</tr>";
     }
     $html .= "</table>";
