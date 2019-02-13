@@ -2,7 +2,11 @@
 
 require_once('../config/connect.php');
 
-$sql = 'SELECT mez, magassag, post FROM jatekos';
+if (isset($_POST['mez'])) {
+    $mez = $_POST['mez'];
+}
+
+$sql = "SELECT * FROM jatekos WHERE mez = '$mez';";
 $result = $connection->query($sql);
 
 if (!$result) {
