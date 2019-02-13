@@ -10,10 +10,9 @@ if (!$result) {
 }
 
 $html = "<select id='jatekos'>";
-echo $html;
 
-while ($row->fetch_assoc()) {
-    $html .= "<option value='{$row['mez']}'></option>";
+while ($row = $result->fetch_assoc()) {
+    $html .= "<option value='{$row['mez']}'>{$row['nev']}</option>";
 }
 
 $html .= "</select>";
