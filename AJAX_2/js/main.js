@@ -1,14 +1,16 @@
 $(document).ready(function () {
     jatekosokatOlvas();
-
     $(document).on("change", "#jatekos", function () {
 
         let id = $(this).val();
         console.log(id);
-
-        $.get("php/jegyzo.php", function (valasz, status) {
-            $('#jatekosokAdatai').html(valasz)
-        });
+        $.post("php/adatok.php",
+        {
+            id: id
+        },
+        function (valasz) {
+            $('#jatekosAdatai').html(valasz);
+        })
     });
 });
 function jatekosokatOlvas() {
