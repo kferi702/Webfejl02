@@ -9,12 +9,17 @@ if (!$result) {
     die('Hiba a lekérdezés során!');
 }
 
-$html = "<table id='adatok'>";
+$html = "<table id='adatok'>"
+        . "<th>Mezszám</th>"
+        . "<th>Magasság</th>"
+        . "<th>Poszt</th>";
 
 while ($row = $result->fetch_assoc()) {
-    $html .= "<th>Mezszám</th>";
-    $html .= "<th>Magasság</th>";
-    $html .= "<th>Poszt</th>";
+    $html .= "<tr>"
+            . "<td>{$row['mez']}</th>"
+            . "<td>{$row['magassag']}</th>"
+            . "<td>{$row['post']}</th>"
+            . "</tr>";
 }
 
 $html .= "</table>";
