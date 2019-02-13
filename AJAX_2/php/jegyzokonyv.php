@@ -15,9 +15,10 @@ if (isset($_POST['mez'])) {
     if ($result->num_rows == 1) {
         $html = "<ul>";
         $row = $result->fetch_row();
-        $html .= "<li>{$row[0]}</li>"
+        $html .= "<li>{$row[1]}</li>"
                 . "<li>{$row[2]}</li>"
                 . "<li>{$row[3]}</li>"
+                . "<li>{$row[4]}</li>"
                 . "</ul>";
         echo $html;
     }
