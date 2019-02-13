@@ -3,7 +3,6 @@ $(document).ready(function () {
     $(document).on("change", "#jatekos", function () {
 
         let mez = $(this).val();
-        console.log(mez);
         $.post("php/adatok.php",
                 {
                     id: mez
