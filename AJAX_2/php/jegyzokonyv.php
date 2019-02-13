@@ -14,11 +14,10 @@ if (isset($_POST['mez'])) {
 
     if ($result->num_rows == 1) {
         $html = "<ul>";
-
         $row = $result->fetch_row();
-        $html .= "<li>Mezszám: {$row[0]}</li>"
-                . "<li>Magasság: {$row[2]}</li>"
-                . "<li>Poszt: {$row[3]}</li>"
+        $html .= "<li>{$row[0]}</li>"
+                . "<li>{$row[2]}</li>"
+                . "<li>{$row[3]}</li>"
                 . "</ul>";
         echo $html;
     }
