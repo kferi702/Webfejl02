@@ -3,6 +3,9 @@ $(document).ready(function () {
 
     $(document).on("change", "#jatekos", function () {
 
+        let id = $(this).val();
+        console.log(id);
+
         $.get("php/jegyzo.php", function (valasz, status) {
             $('#jatekosokAdatai').html(valasz)
         });
