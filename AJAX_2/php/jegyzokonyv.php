@@ -12,15 +12,22 @@ if (isset($_POST['mez'])) {
         die('Hiba a lekérdezés során!');
     }
 
-    while ($row = $result->fetch_assoc()) {
-        $html = "<ul>";
-        $html .= "<li>{$row['be']}</li>"
-                . "<li>{$row['ki']}</li>"
-                . "<li>{$row['bkis']}</li>"
-                . "<li>{$row['bjo']}</li>"
-                . "</ul>";
-        echo $html;
+    $html = "<table class='table table-stripe'>"
+            . "<tr>"
+            . "<th>Be</th>"
+            . "<th>Ki</th>"
+            . "<th>Kísérlet</th>"
+            . "<th>Kosár</th></tr>";
+
+    while ($row = $result->fetch_row()) {
+        $html .= "<td>{$row[2]}</td>"
+                . "<td>{$row[3]}</td>"
+                . "<td>{$row[4]}</td>"
+                . "<td>{$row[5]}</td>"
+                . "</tr>";
     }
+    $html .= "</table>";
+    echo $html;
 }
 
 $connection->close();
