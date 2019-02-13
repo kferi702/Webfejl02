@@ -5,7 +5,7 @@ $(document).ready(function () {
         let mez = $(this).val();
         $.post("php/adatok.php",
                 {
-                    id: mez
+                    mez: mez
                 },
                 function (valasz) {
                     $('#jatekosAdatai').html(valasz);
