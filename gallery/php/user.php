@@ -1,6 +1,7 @@
 <?php
-session_start();
 require_once('../config/connect.php');
+
+session_start();
 
 if (isset($_POST['enter'])) {
     $email = $_POST['email'];
@@ -8,7 +9,6 @@ if (isset($_POST['enter'])) {
     $sql = "SELECT * FROM user WHERE email = ? AND password = ?;";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("ss", $email, $pwd);
-    
 }
 ?>
 <!DOCTYPE html>
