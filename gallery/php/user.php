@@ -52,7 +52,6 @@ if (isset($_POST['enter'])) {
                     echo '<a href="logout.php" class="nav-link">Kilépés</a></li>';
                 }
                 ?>
-                <li class="nav-item"></li>
             </ul>
         </nav>
         <?php echo "<h3>{$lastname} {$firstname} névvel jelentkezett be.</h3>"; ?>
