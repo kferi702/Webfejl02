@@ -24,14 +24,14 @@
         </nav>
         <form enctype="multipart/form-data" action="$_SERVER['PHP_SELF']" method="post">
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="Cím" name="title" required/>
+                <input class="form-control" type="text" placeholder="Cím" name="title" required />
             </div>
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="Leírás" name="description" required/>
+                <input class="form-control" type="text" placeholder="Leírás" name="description" required />
             </div>
             <div class="form-group">
-                <input class="form-control" type="file" name="img" required/>
-            </div>       
+                <input class="form-control" type="file" name="img" required />
+            </div>
         </form>
     </body>
 </html>
