@@ -46,7 +46,7 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
             $smtm->execute();
         }
     } else {
-        echo 'Nincs ilyen fájl!';
+        echo 'Nem engedélyezett fájl!';
     }
 }
 ?>
