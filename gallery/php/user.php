@@ -27,19 +27,31 @@ if (isset($_POST['enter'])) {
         /*
          * Érvénytelen email cím vagy jelszó
          */
-        header('Location: ../index.php');
+        header('Location: ./index.php');
     }
-
-    $stmt->close();
 }
 ?>
 <!DOCTYPE html>
 <html lang="hu">
     <head>
         <title>Galéria</title>
-        <?php require_once('./templates/head.html'); ?>
+        <?php require_once('../templates/head.html'); ?>
     </head>
     <body>
-
+        <ul class="navbar">
+            <li class="nav-item">
+                <a href="upload.php" class="nav-link">Kép feltöltése</a>
+            </li>
+            <?php
+            if (isset($_SESSION['userid'])) {
+                echo '<a href="logout.php" class="nav-link">Kilépés</a></li>';
+            }
+            ?>
+            <li class="nav-item"></li>
+        </ul>
     </body>
 </html>
+<?php
+$stmt->close();
+$connection->close();
+?>
