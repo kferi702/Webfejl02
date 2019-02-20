@@ -43,7 +43,7 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
 
             $stmt = $connection->prepare($sql);
             $smtm->bind_param('isss', $userid, $title, $description, $img_name);
-            
+            $smtm->execute();
         }
     }
 }
