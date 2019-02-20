@@ -2,7 +2,12 @@
 <html lang="hu">
     <head>
         <title>Galéria</title>
-        <?php require_once('./templates/head.html'); ?>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="icon" href="./img/gallery.png" type="image/x-icon"/>
+
     </head>
     <body>
         <div class="container">
