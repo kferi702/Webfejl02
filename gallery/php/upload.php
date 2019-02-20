@@ -42,8 +42,8 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
             $sql = "INSERT INTO gallery(uid, title, description, image) VALUES (?, ?, ?, ?)";
 
             $stmt = $connection->prepare($sql);
-            $smtm->bind_param('isss', $userid, $title, $description, $img_name);
-            $smtm->execute();
+            $stmt->bind_param('isss', $userid, $title, $description, $img_name);
+            $stmt->execute();
         }
     } else {
         echo 'Nem engedélyezett fájl!';
