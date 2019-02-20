@@ -2,8 +2,13 @@
 session_start();
 require_once('../config/connect.php');
 
-if (isset($_POST['upload']) && isset($_SESSION['userid'])) {
-    
+if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
+
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $userid = $_SESSION['userid'];
+    $img_name = $_FILES['img']['name'];
+    var_dump($_FILES['']); die();
 }
 ?>
 <!DOCTYPE html>
@@ -29,7 +34,7 @@ if (isset($_POST['upload']) && isset($_SESSION['userid'])) {
                 ?>
             </ul>
         </nav>
-        <form enctype="multipart/form-data" action="$_SERVER['PHP_SELF']" method="post">
+        <form enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF']?>" method="post">
             <div class="form-group">
                 <input class="form-control" type="text" placeholder="Cím" name="title" required />
             </div>
