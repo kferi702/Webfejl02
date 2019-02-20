@@ -27,7 +27,7 @@ if (isset($_POST['enter'])) {
         /*
          * Érvénytelen email cím vagy jelszó
          */
-        header('Location: ./index.php');
+        header('Location: ../index.php');
     }
 }
 ?>
