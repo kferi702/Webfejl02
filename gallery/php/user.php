@@ -34,6 +34,7 @@ if (isset($_POST['enter'])) {
 <!DOCTYPE html>
 <html lang="hu">
     <head>
+        <meta charset="utf-8"/>
         <title>Galéria</title>
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
         <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -41,17 +42,7 @@ if (isset($_POST['enter'])) {
         <link rel="icon" href="../img/gallery.png" type="image/x-icon"/>
     </head>
     <body>
-        <ul class="navbar">
-            <li class="nav-item">
-                <a href="upload.php" class="nav-link">Kép feltöltése</a>
-            </li>
-            <?php
-            if (isset($_SESSION['userid'])) {
-                echo '<a href="logout.php" class="nav-link">Kilépés</a></li>';
-            }
-            ?>
-            <li class="nav-item"></li>
-        </ul>
+        <?php echo 'Üdvözöllek ' . $lastname . ' ' . $firstname . '!'; ?>
     </body>
 </html>
 <?php

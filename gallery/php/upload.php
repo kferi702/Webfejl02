@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title></title>
+        <meta charset="utf-8"/>
+        <title>Galéria</title>
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+        <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="icon" href="../img/gallery.png" type="image/x-icon"/>
     </head>
     <body>
-        kép feltöltése
-        <?php ?>
+        <nav class="navbar navbar-expand">
+            <ul class="navbar">
+                <li class="nav-item">
+                    <a href="upload.php" class="nav-link">Kép feltöltése</a>
+                </li>
+                <?php
+                if (isset($_SESSION['userid'])) {
+                    echo '<a href="logout.php" class="nav-link">Kilépés</a></li>';
+                }
+                ?>
+                <li class="nav-item"></li>
+            </ul>
+        </nav>
+        <form enctype="multipart/form-data" action="$_SERVER['PHP_SELF']" method="post">
+            <input type="text" placeholder="Cím" name="title" required/>
+            <input type="text" placeholder="Leírás" name="description" required/>
+            <input type="file" name="img" required/>
+        </form>
     </body>
 </html>
