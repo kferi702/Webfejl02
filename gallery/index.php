@@ -11,7 +11,7 @@
                     <form action="php/user.php" method="post">
                         <input class="form-control" type="email" placeholder="E-mail" name="email" required/>
                         <input class="form-control" type="password" placeholder="Jelszó" name="pwd" required/>
-                        <input class="btn btn-primary" type="submit" name="enter"/>
+                        <input class="btn btn-primary" type="submit" name="enter" value="Belépés"/>
                     </form>
                 </div>
             </div>
