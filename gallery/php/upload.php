@@ -38,7 +38,11 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
                 }
             }
             move_uploaded_file($_FILES["img"]["tmp_name"], "../uploads/" . $new_image_name);
+
             $sql = "INSERT INTO gallery(uid, title, description, image) VALUES (?, ?, ?, ?)";
+
+            $stmt = $connection->prepare($sql);
+            $smtm->bind_param('isss', $userid, $title, $description, $img_name);
             
         }
     }
