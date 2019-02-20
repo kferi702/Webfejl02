@@ -1,5 +1,3 @@
-<?php require_once('./config/connect.php'); ?>
-
 <!DOCTYPE html>
 <html lang="hu">
     <head>
