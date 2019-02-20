@@ -32,6 +32,9 @@
             <div class="form-group">
                 <input class="form-control" type="file" name="img" required />
             </div>
+            <div>
+                <input class="btn btn-primary" type="submit" value="Feltölt" name="upload" />
+            </div>
         </form>
     </body>
 </html>
