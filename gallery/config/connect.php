@@ -1,6 +1,6 @@
 <?php
 
-$connectinon = new mysqli('localhost', 'esti_gallery', 'estigalleryuser', 'virtual_receptionist', '3306');
+$connection = new mysqli('localhost', 'esti_gallery', 'estigalleryuser', 'virtual_receptionist', '3306');
 
 if ($connection->connect_errno) {
     die('Nem sikerült csatlakozni!\n' . $connection_error);
