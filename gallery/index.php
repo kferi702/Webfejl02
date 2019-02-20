@@ -8,6 +8,14 @@
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
     </head>
     <body>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <form>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
