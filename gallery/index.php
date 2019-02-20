@@ -12,9 +12,9 @@
             <div class="row">
                 <div class="col-4">
                     <form class="">
-                        <input class="form-control" type="email" placeholder="E-mail" name="email" required />
-                        <input class="form-control" type="password" placeholder="Jelszó" name="pwd" required />
-                        <input class="btn btn-primary" type="submit" name="enter" />
+                        <input class="form-control" type="email" placeholder="E-mail" name="email" required/>
+                        <input class="form-control" type="password" placeholder="Jelszó" name="pwd" required/>
+                        <input class="btn btn-primary" type="submit" name="enter"/>
                     </form>
                 </div>
             </div>
