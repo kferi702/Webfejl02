@@ -1,5 +1,10 @@
 <?php
 session_start();
+require_once('../config/connect.php');
+
+if (isset($_POST['upload']) && isset($_SESSION['userid'])) {
+    
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +27,6 @@ session_start();
                     echo '<a href="logout.php" class="nav-link">Kilépés</a></li>';
                 }
                 ?>
-                <li class="nav-item"></li>
             </ul>
         </nav>
         <form enctype="multipart/form-data" action="$_SERVER['PHP_SELF']" method="post">
