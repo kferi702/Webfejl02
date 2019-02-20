@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2019. Feb 20. 16:33
+-- Létrehozás ideje: 2019. Feb 20. 19:11
 -- Kiszolgáló verziója: 10.1.30-MariaDB
 -- PHP verzió: 7.2.1
 
@@ -38,15 +38,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `description` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   `image` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `gallery`
---
-
-INSERT INTO `gallery` (`id`, `uid`, `title`, `description`, `image`) VALUES
-(1, 1, 'Oroszlán', 'Egy oroszlán', 'lion.jpg'),
-(2, 1, 'Part', 'Séta a parton', 'pexels-photo-1903707.jpeg');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 -- --------------------------------------------------------
 
