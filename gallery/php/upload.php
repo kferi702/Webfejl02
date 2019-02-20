@@ -8,8 +8,15 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
     $description = $_POST['description'];
     $userid = $_SESSION['userid'];
     $img_name = $_FILES['img']['name'];
-    var_dump($_FILES['img']);
-    die();
+    $file_type = $_FILES['img']['type'];
+
+    /*
+     * Engedélyezett fájltípusok
+     */
+    if ($file_type == "image/jpeg" || $file_type == "image/png" || $file_type == "image/jpg" && $_FILES['image']['size'] < 500000) {
+        
+                
+    }
 }
 ?>
 <!DOCTYPE html>
