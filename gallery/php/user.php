@@ -12,13 +12,14 @@ if (isset($_POST['enter'])) {
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("ss", $email, $pwd);
     $stmt->execute();
+    $stmt->store_result();
 
     if ($stmt->num_rows == 1) {
-        $stmt->bind_result($id, $firstname, $lastname);
+        $stmt->bind_result($id, $email, $pwd, $firstname, $lastname);
         $stmt->fetch();
         $_SESSION['userid'] = $id;
     } else {
-        header('Location: index.php');
+        header('Location: ../index.php');
     }
 
     $stmt->close();
