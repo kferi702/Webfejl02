@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2019. Feb 20. 19:11
+-- Létrehozás ideje: 2019. Feb 20. 19:41
 -- Kiszolgáló verziója: 10.1.30-MariaDB
 -- PHP verzió: 7.2.1
 
@@ -37,7 +37,8 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `title` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   `description` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   `image` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `userid` (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 -- --------------------------------------------------------
@@ -62,6 +63,16 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `email`, `password`, `firstname`, `lastname`) VALUES
 (1, 'mail@vasvari.hu', 'teszt', 'Elek', 'Teszt');
+
+--
+-- Megkötések a kiírt táblákhoz
+--
+
+--
+-- Megkötések a táblához `gallery`
+--
+ALTER TABLE `gallery`
+  ADD CONSTRAINT `userid` FOREIGN KEY (`uid`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
