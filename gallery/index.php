@@ -11,8 +11,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <form>
-                        
+                    <form class="">
+                        <input class="form-control" type="email" placeholder="E-mail" name="email" required />
+                        <input class="form-control" type="password" placeholder="Jelszó" name="pwd" required />
                     </form>
                 </div>
             </div>
