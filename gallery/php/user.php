@@ -15,10 +15,18 @@ if (isset($_POST['enter'])) {
     $stmt->store_result();
 
     if ($stmt->num_rows == 1) {
+
+        /*
+         * Sikeres bejelentkezés
+         */
         $stmt->bind_result($id, $email, $pwd, $firstname, $lastname);
         $stmt->fetch();
         $_SESSION['userid'] = $id;
     } else {
+
+        /*
+         * Érvénytelen email cím vagy jelszó
+         */
         header('Location: ../index.php');
     }
 
