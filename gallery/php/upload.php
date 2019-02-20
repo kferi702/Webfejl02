@@ -45,6 +45,8 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
             $smtm->bind_param('isss', $userid, $title, $description, $img_name);
             $smtm->execute();
         }
+    } else {
+        echo 'Nincs ilyen fájl!';
     }
 }
 ?>
