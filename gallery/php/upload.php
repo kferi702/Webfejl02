@@ -14,8 +14,33 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
      * Engedélyezett fájltípusok
      */
     if ($file_type == "image/jpeg" || $file_type == "image/png" || $file_type == "image/jpg" && $_FILES['image']['size'] < 500000) {
-        
-                
+        if ($_FILES['img']['error'] > 0) {
+
+            /*
+             * Hiba a feltöltés során!
+             */
+            echo('Hibakód: ' . $_FILES['img']['error']);
+        } else {
+
+            /*
+             * Sikeres a feltöltés
+             */
+            $i = 1;
+            $success = false;
+            $new_image_name = $img_name;
+
+            while (!$success) {
+                if (file_exists("../uploads/" . $new_image_name)) {
+                    $i++;
+                    $new_image_name = "$i" . $img_name;
+                } else {
+                    $success = true;
+                }
+            }
+            move_uploaded_file($_FILES["img"]["tmp_name"], "../uploads/" . $new_image_name);
+            $sql = "INSERT INTO gallery(uid, title, description, image) VALUES (?, ?, ?, ?)";
+            
+        }
     }
 }
 ?>
