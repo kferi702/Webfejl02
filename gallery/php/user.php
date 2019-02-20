@@ -7,7 +7,8 @@ if (isset($_POST['enter'])) {
     $pwd = $_POST['pwd'];
     $sql = "SELECT * FROM user WHERE email = ? AND password = ?;";
     $stmt = $connection->prepare($sql);
-    $stmt->bind_param("s", $email, $pwd);
+    $stmt->bind_param("ss", $email, $pwd);
+    
 }
 ?>
 <!DOCTYPE html>
