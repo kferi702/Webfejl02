@@ -32,7 +32,7 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
             while (!$success) {
                 if (file_exists("../uploads/" . $new_image_name)) {
                     $i++;
-                    $new_image_name = $img_name . "$i";
+                    $new_image_name = "$i" . $img_name;
                 } else {
                     $success = true;
                 }
