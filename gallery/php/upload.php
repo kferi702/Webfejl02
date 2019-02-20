@@ -23,9 +23,15 @@
             </ul>
         </nav>
         <form enctype="multipart/form-data" action="$_SERVER['PHP_SELF']" method="post">
-            <input type="text" placeholder="Cím" name="title" required/>
-            <input type="text" placeholder="Leírás" name="description" required/>
-            <input type="file" name="img" required/>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Cím" name="title" required/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Leírás" name="description" required/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="file" name="img" required/>
+            </div>       
         </form>
     </body>
 </html>
