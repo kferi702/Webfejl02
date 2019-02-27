@@ -55,7 +55,7 @@ if (isset($_POST['enter'])) {
                 </p>
             </ul>
         </nav>
-<?php echo "<h3>{$lastname} {$firstname} névvel jelentkezett be.</h3>"; ?>
+        <?php echo "<h3>{$lastname} {$firstname} névvel jelentkezett be.</h3>"; ?>
     </body>
 </html>
 <?php
