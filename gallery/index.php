@@ -21,14 +21,12 @@
                     </form>
                 </div>
             </div>
-            <div>
-                <?php
-                if (isset($_SESSION['jogosulatlan']) && $_SESSION['jogosulatlan']) {
-                    file_get_contents('html/error.html');
-                    unset($_SESSION['jogosulatlan']);
-                }
-                ?>
-            </div>
+            <?php
+            if (isset($_SESSION['jogosulatlan']) && $_SESSION['jogosulatlan']) {
+                file_get_contents('html/error.html');
+                unset($_SESSION['jogosulatlan']);
+            }
+            ?>
         </div>
     </body>
 </html>
