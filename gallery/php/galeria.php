@@ -15,6 +15,8 @@ while ($stmt->fetch()) {
             . "</div>";
 }
 $kepek .= '</div>';
+$stmt-close();
+$connection->close();
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,6 +45,3 @@ $kepek .= '</div>';
         <div class="container"></div>
     </body>
 </html>
-<?php
-$stmt->close();
-?>
