@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="hu">
     <head>
@@ -19,6 +20,14 @@
                         <input class="btn btn-primary" type="submit" name="enter" value="Belépés"/>
                     </form>
                 </div>
+            </div>
+            <div>
+                <?php
+                if (isset($_SESSION['jogosulatlan']) && $_SESSION['jogosulatlan']) {
+                    file_get_contents('html/error.html');
+                    session_unset();
+                }
+                ?>
             </div>
         </div>
     </body>
