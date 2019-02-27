@@ -48,6 +48,8 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
     } else {
         echo 'Nem engedélyezett fájl!';
     }
+    $stmt->close();
+    $connection->close();
 }
 ?>
 <!DOCTYPE html>
