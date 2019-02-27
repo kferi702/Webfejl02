@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once('../config/init.php');
 require_once('../config/connect.php');
 
 if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
@@ -48,7 +48,6 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
     } else {
         echo 'Nem engedélyezett fájl!';
     }
-    $stmt->close();
     $connection->close();
 }
 ?>

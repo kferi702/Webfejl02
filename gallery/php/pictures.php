@@ -35,3 +35,6 @@ if (isset($_SESSION['userid'])) {
         <div class="container"></div>
     </body>
 </html>
+<?php
+$stmt->close();
+?>
