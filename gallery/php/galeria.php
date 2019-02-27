@@ -1,5 +1,8 @@
 <?php
 require_once('../config/init.php');
+$sql = "SELECT * FROM esti_gallery WHERE uid = ?;";
+
+
 ?>
 <!DOCTYPE html>
 <html>
