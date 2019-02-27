@@ -1,12 +1,6 @@
 <?php
-require_once('../config/connect.php');
-session_start();
+require_once('../config/init.php');
 
-if (isset($_SESSION['userid'])) {
-
-    $sql = "SELECT * FROM gallery;";
-    $fileContent = file_get_contents($_FILES['upload_file']['tmp_name']);
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,11 +18,11 @@ if (isset($_SESSION['userid'])) {
                 <p class="nav-item">
                     <a href="pictures.php" class="nav-link">Képek megtekintése</a>
                     <a href="upload.php" class="nav-link">Kép feltöltése</a>
-                    <?php
-                    if (isset($_SESSION['userid'])) {
-                        echo '<a href="logout.php" class="nav-link">Kilépés</a>';
-                    }
-                    ?>
+<?php
+if (isset($_SESSION['userid'])) {
+    echo '<a href="logout.php" class="nav-link">Kilépés</a>';
+}
+?>
                 </p>
             </ul>
         </nav>
