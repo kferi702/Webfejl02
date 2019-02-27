@@ -5,6 +5,7 @@ session_start();
 if (isset($_SESSION['userid'])) {
 
     $sql = "SELECT * FROM gallery;";
+    $fileContent = file_get_contents($_FILES['upload_file']['tmp_name']);
 }
 ?>
 <!DOCTYPE html>
@@ -34,7 +35,3 @@ if (isset($_SESSION['userid'])) {
         <div class="container"></div>
     </body>
 </html>
-<?php
-$stmt->close();
-$connection->close();
-?>
