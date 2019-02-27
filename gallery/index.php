@@ -25,7 +25,7 @@
                 <?php
                 if (isset($_SESSION['jogosulatlan']) && $_SESSION['jogosulatlan']) {
                     file_get_contents('html/error.html');
-                    session_unset();
+                    unset($_SESSION['jogosulatlan']);
                 }
                 ?>
             </div>
