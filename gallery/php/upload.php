@@ -60,6 +60,7 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
         <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../css/main.css"/>
         <link rel="icon" href="../img/gallery.png" type="image/x-icon"/>
     </head>
     <body>
@@ -76,19 +77,21 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
                 </p>
             </ul>
         </nav>
-        <form enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
-            <div class="form-group">
-                <input class="form-control" type="text" placeholder="Cím" name="title" required />
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text" placeholder="Leírás" name="description" required />
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="file" name="img" required />
-            </div>
-            <div>
-                <input class="btn btn-primary" type="submit" value="Feltölt" name="upload" />
-            </div>
-        </form>
+        <div class="container" id="upload_pix">
+            <form enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Cím" name="title" required />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Leírás" name="description" required />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="file" name="img" required />
+                </div>
+                <div>
+                    <input class="btn btn-primary" type="submit" value="Feltölt" name="upload" />
+                </div>
+            </form>
+        </div>
     </body>
 </html>
