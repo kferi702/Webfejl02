@@ -2,7 +2,7 @@
 require_once('../config/init.php');
 
 $uid = $_SESSION['userid'];
-$sql = "SELECT * FROM esti_gallery WHERE uid = ?;";
+$sql = "SELECT * FROM gallery WHERE uid = ?;";
 
 $stmt = $connection->prepare($sql);
 $stmt->bind_param('i', $uid);
@@ -15,7 +15,7 @@ while ($stmt->fetch()) {
             . "</div>";
 }
 $kepek .= '</div>';
-$stmt-close();
+$stmt -> close();
 $connection->close();
 ?>
 <!DOCTYPE html>
