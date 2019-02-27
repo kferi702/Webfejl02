@@ -1,7 +1,6 @@
 <?php
-require_once('../config/connect.php');
-
 session_start();
+require_once('../config/connect.php');
 
 if (isset($_POST['enter'])) {
 
