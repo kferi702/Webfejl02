@@ -5,7 +5,14 @@ $uid = $_SESSION['userid'];
 $sql = "SELECT * FROM esti_gallery WHERE uid = ?;";
 
 $stmt = $connection->prepare($sql);
-
+$stmt->bind_param('i', $uid);
+$stmt->execute();
+$stmt->bind_result($id, $uid, $title, $description, $img);
+$kepek = "<div class='rounded'>";
+while ($stmt->fetch()) {
+    
+}
+$kepek .= '</div>';
 ?>
 <!DOCTYPE html>
 <html>
