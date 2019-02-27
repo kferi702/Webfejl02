@@ -4,6 +4,7 @@ session_start();
 require_once('../config/connect.php');
 
 if (!isset($_SESSION['userid'])) {
-    header('Location: error.php');
+    $_SESSION['jogosulatlan'] = true;
+    header('Location: ../index.php');
     die();
 }
