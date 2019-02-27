@@ -63,14 +63,14 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
     <body>
         <nav class="navbar navbar-expand">
             <ul class="navbar">
-                <li class="nav-item">
+                <p class="nav-item">
                     <a href="upload.php" class="nav-link">Kép feltöltése</a>
-                </li>
-                <?php
-                if (isset($_SESSION['userid'])) {
-                    echo '<a href="logout.php" class="nav-link">Kilépés</a></li>';
-                }
-                ?>
+                    <?php
+                    if (isset($_SESSION['userid'])) {
+                        echo '<a href="logout.php" class="nav-link">Kilépés</a>'
+                        . '</p>';
+                    }
+                    ?>
             </ul>
         </nav>
         <form enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
