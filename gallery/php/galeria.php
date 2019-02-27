@@ -8,9 +8,11 @@ $stmt = $connection->prepare($sql);
 $stmt->bind_param('i', $uid);
 $stmt->execute();
 $stmt->bind_result($id, $uid, $title, $description, $img);
-$kepek = "<div class='rounded'>";
+$kepek = "<div class='row>";
 while ($stmt->fetch()) {
-    
+    $kepek .= "<div class='col-3'>"
+            . "<img class='img-thumbnail' src='../uploads/{$img}'/>"
+            . "</div>";
 }
 $kepek .= '</div>';
 ?>
