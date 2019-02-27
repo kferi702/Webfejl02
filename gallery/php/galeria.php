@@ -1,7 +1,10 @@
 <?php
 require_once('../config/init.php');
+
+$uid = $_SESSION['userid'];
 $sql = "SELECT * FROM esti_gallery WHERE uid = ?;";
 
+$stmt = $connection->prepare($sql);
 
 ?>
 <!DOCTYPE html>
