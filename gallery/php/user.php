@@ -44,14 +44,14 @@ if (isset($_POST['enter'])) {
     <body>
         <nav class="navbar navbar-expand">
             <ul class="navbar">
-                <li class="nav-item">
+                <p class="nav-item">
                     <a href="upload.php" class="nav-link">Kép feltöltése</a>
-                </li>
-                <?php
-                if (isset($_SESSION['userid'])) {
-                    echo '<a href="logout.php" class="nav-link">Kilépés</a></li>';
-                }
-                ?>
+                    <?php
+                    if (isset($_SESSION['userid'])) {
+                        echo '<a href="logout.php" class="nav-link">Kilépés</a>'
+                        . '</p>';
+                    }
+                    ?>
             </ul>
         </nav>
         <?php echo "<h3>{$lastname} {$firstname} névvel jelentkezett be.</h3>"; ?>
