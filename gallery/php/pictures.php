@@ -2,6 +2,17 @@
 require_once('../config/connect.php');
 
 session_start();
+
+/*
+ * Kép letöltés
+ */
+
+
+$sql = ";";
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
