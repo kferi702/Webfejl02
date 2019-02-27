@@ -27,5 +27,10 @@ session_start();
                     ?>
             </ul>
         </nav>
+        <div class="container"></div>
     </body>
 </html>
+<?php
+$stmt->close();
+$connection->close();
+?>
