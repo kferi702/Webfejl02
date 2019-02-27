@@ -23,7 +23,8 @@
             </div>
             <?php
             if (isset($_SESSION['jogosulatlan']) && $_SESSION['jogosulatlan']) {
-                file_get_contents('html/error.html');
+                $error = file_get_contents('html/error.html');
+                echo $error;
                 unset($_SESSION['jogosulatlan']);
             }
             ?>
