@@ -1,14 +1,11 @@
 <?php
 require_once('../config/connect.php');
-
 session_start();
 
-/*
- * Kép letöltés
- */
+if (isset($_SESSION['userid'])) {
 
-
-$sql = ";";
+    $sql = "SELECT * FROM gallery;";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,12 +23,12 @@ $sql = ";";
                 <p class="nav-item">
                     <a href="pictures.php" class="nav-link">Képek megtekintése</a>
                     <a href="upload.php" class="nav-link">Kép feltöltése</a>
-<?php
-if (isset($_SESSION['userid'])) {
-    echo '<a href="logout.php" class="nav-link">Kilépés</a>'
-    . '</p>';
-}
-?>
+                    <?php
+                    if (isset($_SESSION['userid'])) {
+                        echo '<a href="logout.php" class="nav-link">Kilépés</a>';
+                    }
+                    ?>
+                </p>
             </ul>
         </nav>
         <div class="container"></div>

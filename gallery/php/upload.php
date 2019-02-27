@@ -70,10 +70,10 @@ if (isset($_POST['upload']) && (isset($_SESSION['userid']))) {
                     <a href="pictures.php" class="nav-link">Képek megtekintése</a>
                     <?php
                     if (isset($_SESSION['userid'])) {
-                        echo '<a href="logout.php" class="nav-link">Kilépés</a>'
-                        . '</p>';
+                        echo '<a href="logout.php" class="nav-link">Kilépés</a>';
                     }
                     ?>
+                </p>
             </ul>
         </nav>
         <form enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">

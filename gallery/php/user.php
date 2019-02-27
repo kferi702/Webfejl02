@@ -49,13 +49,13 @@ if (isset($_POST['enter'])) {
                     <a href="upload.php" class="nav-link">Kép feltöltése</a>
                     <?php
                     if (isset($_SESSION['userid'])) {
-                        echo '<a href="logout.php" class="nav-link">Kilépés</a>'
-                        . '</p>';
+                        echo '<a href="logout.php" class="nav-link">Kilépés</a>';
                     }
                     ?>
+                </p>
             </ul>
         </nav>
-        <?php echo "<h3>{$lastname} {$firstname} névvel jelentkezett be.</h3>"; ?>
+<?php echo "<h3>{$lastname} {$firstname} névvel jelentkezett be.</h3>"; ?>
     </body>
 </html>
 <?php
