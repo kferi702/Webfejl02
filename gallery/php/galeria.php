@@ -42,6 +42,8 @@ $connection->close();
                 </p>
             </ul>
         </nav>
-        <div class="container"></div>
+        <div class="container-fluid">
+            <?php echo $kepek; ?>
+        </div>
     </body>
 </html>
