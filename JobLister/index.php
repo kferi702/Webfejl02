@@ -1,6 +1,8 @@
 <?php
 
-require_once('./html/header.html');
-require_once('./html/menu.html');
-require_once('./html/content.html');
-require_once('./html/footer.html');
+require_once('./config/functions.php');
+print_HTML('./html/header.html');
+print_HTML('./html/menu.html');
+print_HTML('./html/content.html');
+print_HTML('./html/login.html');
+print_HTML('./html/footer.html');
