@@ -41,10 +41,10 @@ $(document).ready(function () {
     $('[name=feltolt]').click(function () {
         let katid = $('[name=katid]').val();
         let munkaado = $('[name=munkaado]').val();
-        let munkakor = $('[name=]').val();
-        let hely = $('[name=katid]').val();
-        let leiras = $('[name=katid]').val();
-        let fizetes = $('[name=katid]').val();
+        let munkakor = $('[name=munkakor]').val();
+        let hely = $('[name=hely]').val();
+        let leiras = $('[name=leiras]').val();
+        let fizetes = $('[name=fizetes]').val();
 
         $.ajax({
             method: "POST",
