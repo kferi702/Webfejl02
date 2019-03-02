@@ -9,7 +9,7 @@ $(document).ready(function () {
     $('#loginForm').on('submit', function (e) {
         e.preventDefault();
     }) // Form letiltás vége
-    
+
     /*
      * Login esemény megvalósítása ajax-szal
      */
@@ -36,5 +36,9 @@ $(document).ready(function () {
             }
         });
     }); // Login vége
-    
+
+    $('[name=feltolt]').click(function () {
+        
+    }); // állás feltöltés vége
+
 }); // jQuery.ready() vége
