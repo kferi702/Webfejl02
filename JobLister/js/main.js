@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
-    $('loginForm').on('submit', function (e) {
+    $('#loginForm').on('submit', function (e) {
         e.preventDefault();
     })
 
-    $('#enter').click(function () {
+    $('[name=enter]').click(function () {
 
         let email = $('#email').val();
         let pwd = $('#pwd').val();
 
         $.post({
-            type: "POST",
+            method: "POST",
             url: "php/log_in.php",
             data: {
                 email: email,
