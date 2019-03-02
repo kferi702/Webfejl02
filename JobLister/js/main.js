@@ -18,6 +18,7 @@ $(document).ready(function () {
             },
             success: function (valasz) {
                 console.log(valasz);
+                $('#logout').css('display', 'none');
             },
             error: function (status) {
                 console.log(status);
