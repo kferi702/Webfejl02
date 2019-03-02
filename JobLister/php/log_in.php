@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['email'])) {
          */
 
         $stmt->bind_result($id, $nev, $email, $jelszo);
+        $stmt->fetch();
         $_SESSION['userid'] = $id;
         echo 'Beléptél!';
     } else {

@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     $("#logout").css("display", "none");
+    $("#upload").css("display", "none");
 
     /*
      * Form alapértelmezett működésének megakadályozása
@@ -28,6 +29,7 @@ $(document).ready(function () {
                 console.log(valasz);
                 $('#login').css('display', 'none');
                 $('#logout').css('display', 'inline');
+                $('#upload').css('display', 'inline');
             },
             error: function (status) {
                 console.log(status);
