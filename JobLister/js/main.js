@@ -1,9 +1,17 @@
 $(document).ready(function () {
 
+    $("#logout").css("display", "none");
+
+    /*
+     * Form alapértelmezett működésének megakadályozása
+     */
     $('#loginForm').on('submit', function (e) {
         e.preventDefault();
-    })
-
+    }) // Form letiltás vége
+    
+    /*
+     * Login esemény megvalósítása ajax-szal
+     */
     $('[name=enter]').click(function () {
 
         let email = $('#email').val();
@@ -25,5 +33,6 @@ $(document).ready(function () {
                 console.log(status);
             }
         });
-    });
-});
+    }); // Login vége
+    
+}); // jQuery.ready() vége
