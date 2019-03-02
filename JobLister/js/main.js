@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+    $('loginForm').on('submit', function (e) {
+        e.preventDefault();
+    })
+
     $('#enter').click(function () {
 
         let email = $('#email').val();
