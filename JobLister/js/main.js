@@ -18,7 +18,8 @@ $(document).ready(function () {
             },
             success: function (valasz) {
                 console.log(valasz);
-                $('#logout').css('display', 'none');
+                $('#login').css('display', 'none');
+                $('#logout').css('display', 'inline');
             },
             error: function (status) {
                 console.log(status);
