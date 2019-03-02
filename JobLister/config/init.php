@@ -1,10 +1,5 @@
 <?php
-
 session_start();
-require_once('config/functions.php');
-
-print_HTML('html/header.html');
-
-print_HTML('html/content.html');
-
-print_HTML('html/footer.html');
+$appLocation = $_SERVER['DOCUMENT_ROOT'] . 'JobLister';
+require_once($appLocation . '/config/functions.php');
+require_once($appLocation . 'config//connect.php');
