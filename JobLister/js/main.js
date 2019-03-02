@@ -15,7 +15,7 @@ $(document).ready(function () {
                 console.log(valasz);
             },
             error: function (status) {
-                alert(status);
+                console.log(status);
             }
         });
     });
